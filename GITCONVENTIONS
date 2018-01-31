@@ -1,0 +1,19 @@
+The general strategy for development in this repo will be for work to be
+integrated in the dev branch and merged to the master branch whenever a
+fresh deployment is to be done.
+
+Work will take place in topic branches. These will be squash merged into
+dev when ready. The topic branches will remain on github so that the
+squash merge does not lose details of history.
+
+Topic branches may have branches based off of them. They may be merged
+into their topic branch with or without squashing. A subbranch of a
+topic branch may rewrite its own history. (As in, work on a subbranch
+may be rebased even if that subbranch has been pushed to git already and
+thus might require --force for a subsequent git push of that subbranch.)
+Consequently, no one should ever base work off of a subbranch or merge
+from it.
+
+These all are guidelines, not rules, and can be amended as the
+developing workflow requires. Such amendments *should* be reflected in
+this file, but there is some prospect of drift.
