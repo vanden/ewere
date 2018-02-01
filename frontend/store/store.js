@@ -33,7 +33,7 @@ const thunk = ({ dispatch, getState }) => next => action => {
 import rootReducer from '../reducers/root_reducer';
 
 const middlewares = [thunk]
-middlewares.push(logger)  // FixMe Remove once in production
+//middlewares.push(logger)  // FixMe Remove once in production
 
 // Commented out until we are ready for production. This all included
 // early to ensure that redux-logger doesn't slip into production by
