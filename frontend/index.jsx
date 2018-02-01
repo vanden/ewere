@@ -3,9 +3,22 @@ import ReactDOM from 'react-dom'
 
 import configureStore from './store/store'
 
+import Root from './components/root'
+
 document.addEventListener('DOMContentLoaded', () => {
-  let store = configureStore()
+  const store = configureStore()
+
+  // FixMe Here for testing
+  window.getState = store.getState
+  window.dispatch = store.dispatch
 
   const root = document.getElementById('root')
-  ReactDOM.render(<h1>Hello ewere world!</h1>, root);
+  ReactDOM.render(<Root store={ store } />, root)
 });
+
+
+import { login, logout, signup } from './util/session_api_util'
+
+window.login = login
+window.logout = logout
+window.signup = signup
