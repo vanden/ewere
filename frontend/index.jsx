@@ -5,8 +5,10 @@ import configureStore from './store/store'
 
 import Root from './components/root'
 
+// Move into EventListener once done testing //TODO
+let store = configureStore()
+
 document.addEventListener('DOMContentLoaded', () => {
-  let store = configureStore()
 
   if (window.currentUser) {
     const preloadedState = { session: { currentUser: window.currentUser } }
