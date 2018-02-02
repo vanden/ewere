@@ -31,6 +31,19 @@ class SessionForm extends React.Component {
     this.props.processForm(user)
   }
 
+  handleDemoUserSignin(e) {
+    e.preventDefault()
+
+    let demoUser = {
+      email: "guest@example.com",
+      username: "guest",
+      password:"password"
+    }
+    this.props.demoUserSignIn(demoUser)
+      .then( () => {//should add to history, I guess
+      })
+    }
+
   navLink() {
     if (this.props.formType === 'login') {
       return <Link to="/signup">sign up instead</Link>
@@ -89,6 +102,9 @@ class SessionForm extends React.Component {
             </label>
             <br/>
         <input type="submit" value={this.props.formType} />
+        <button className="button"
+              onClick={(e) => this.handleDemoUserSignin(e)} >Demo User Sign In</button>
+
           </div>
         </form>
       </div>
