@@ -47,17 +47,20 @@
     flex-direction: column;
     height: 18vh;
     margin-bottom: 1vh;
+    margin-top: 1vh;
 }
 
-.login-form-field-label {
-    font-size: 85%;
-    color: red;
-    font-family: $text-font-primary, $title-font-secondary;
+.login-form-fields label {
+    font-size: 100%;
+    // Why does this class have no effect?
+    color: $darkestColour;
+    font-family: $title-font-primary, $title-font-secondary;
+    padding: 0px 0px 3px;
 }
 
 h1, h2, h3  {
     color: $darkestColour;
-    font-family: $text-font-primary, $title-font-secondary;
+    font-family: $title-font-primary, $title-font-secondary;
 }
 
 h1 {
@@ -102,12 +105,14 @@ h3  {
 
 
 .authbtn {
-    font: bold 15px $title-font-primary;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: $title-font-primary;
     background-color: $mediumColour;
     text-decoration: none;
     text-align: center;
     color: $lightColour;
-    padding: 5px 10px 5px 10px;    
+    padding: 8px 10px 7px 10px;
     border-radius: 10px;
     border-style: solid;
     border-width: 2px;

@@ -89,21 +89,21 @@ class SessionForm extends React.Component {
           <div className="login-form-block">
             <div className="login-form-fields">
               <br/>
-              <label className="login-field-label">Username: </label>
+              <label>Username: </label>
               <input type="text"
                      value={this.state.username}
                      onChange={this.update('username')}
                      className="login-input"
                      />
               <br/>
-              <label className="login-field-label">Email: </label>
+              <label>Email: </label>
               <input type="text"
                      value={this.state.email}
                      onChange={this.update('email')}
                      className="login-input"
                      />
               <br/>
-              <label className="login-field-label">Password:</label>
+              <label>Password:</label>
               <input type="password"
                      value={this.state.password}
                      onChange={this.update('password')}
