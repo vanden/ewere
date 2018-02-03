@@ -1,8 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default ({ currentUser, logout }) => {
-  console.log(currentUser)
+export default ({ currentUser, logout, pathname}) => {
+
+  let nav_button
+  if (pathname === '/signup') {
+    nav_button = <Link className="authbtn" to="/login" onClick={clearErrors}>Log In</Link>
+  } else {
+    nav_button = <Link className="authbtn" to="/signup" onClick={clearErrors}>Sign Up</Link>
+  }
+
   const display = currentUser ? (
     <div>
       <h3>Welcome {currentUser.username}!</h3>
@@ -10,8 +17,7 @@ export default ({ currentUser, logout }) => {
     </div>
   ) : (
     <div className="authlinks">
-      <Link className="authbtn" to="/signup">Sign Up</Link>
-      <Link className="authbtn" to="/login">Log In</Link>
+      {nav_button}
     </div>
   );
   return (

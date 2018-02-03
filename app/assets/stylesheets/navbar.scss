@@ -8,12 +8,11 @@
 
 .authlinks {
     text-align: center;
-    justify-content: space-between;
-    width: 15vw;
-    margin-right: 5vw;
     margin-top: 2vh;
     margin-bottom: 2vh;
     display: flex;
+    flex-direction: flex-end;
+    margin-right: 5vw;
 }
 
 
