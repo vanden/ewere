@@ -1,4 +1,23 @@
 
+.blurb{
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: $darkColour;
+    font-size: 155%;
+    font-weight: 600;
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+
+.slogan{
+    font-size: 220%;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
 
 .login-form-container {
     display: flex;
@@ -37,6 +56,15 @@ h3  {
     font-size: 100%;
 }
 
+.login-form-block {
+    background-color: $lightestColour;
+    // Why doesn't the border show up? //fixme
+    border-width: 3px;
+    border-color: $darkestColour;
+    padding: 10px 2vw;
+    border-radius: 15px;
+    margin-top: 5vh;
+}
 .login-form {
     display: flex;
     flex-direction: column;

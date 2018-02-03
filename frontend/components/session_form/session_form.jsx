@@ -75,12 +75,18 @@ class SessionForm extends React.Component {
   render() {
     return (
       <div className="login-form-container">
+        <div className="blurb">
+          <div className="slogan">
+            Simple team project & task management
+          </div>
+          eWere helps your team track tasks and projects without itself becoming a project.
+        </div>
         <form onSubmit={this.handleSubmit} className="login-form">
           <h2>Welcome to eWere!</h2>
           <br/>
           <h3>Please {this.props.formType} or {this.navLink()}</h3>
           {this.renderErrors()}
-          <div className="login-formssss">
+          <div className="login-form-block">
             <div className="login-form-fields">
               <br/>
               <label className="login-field-label">Username: </label>
