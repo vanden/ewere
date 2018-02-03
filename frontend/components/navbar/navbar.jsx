@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-export default ({ currentUser, logout, pathname}) => {
+export default ({ currentUser, logout, pathname, clearErrors }) => {
 
   let nav_button
   if (pathname === '/signup') {

@@ -2,7 +2,7 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 
 import SessionForm from './session_form'
-import { login, signup } from '../../actions/session_actions'
+import { login, signup, clearErrors } from '../../actions/session_actions'
 
 
 const mapStateToProps = (state) => {
@@ -21,6 +21,7 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     processForm: user => dispatch(processForm(user)),
     formType,
     demoUserSignIn: user => dispatch(login(user)),
+    clearErrors: () => dispatch(clearErrors())
   }}
 
 
