@@ -85,7 +85,7 @@ class SessionForm extends React.Component {
           <h2>Welcome to eWere!</h2>
           <br/>
           <h3>Please {this.props.formType} or {this.navLink()}</h3>
-          {this.renderErrors()}
+
           <div className="login-form-block">
             <div className="login-form-fields">
               <br/>
@@ -116,6 +116,7 @@ class SessionForm extends React.Component {
               <button className="authbtn"
                       onClick={(e) => this.handleDemoUserSignin(e)} >Demo User</button>
             </div>
+                    {this.renderErrors()}
           </div>
         </form>
       </div>
