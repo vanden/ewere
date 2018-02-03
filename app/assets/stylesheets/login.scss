@@ -39,6 +39,7 @@
 
 .login-form a:link, a:visited {
     color: $lightestColour;
+    text-decoration: none;
 }
 
 
@@ -94,12 +95,13 @@
     font-family: $title-font-primary;
     background-color: $mediumColour;
     text-align: center;
-    color: $lightColour;
+    color: $lightestColour;
     padding: 8px 10px 7px 10px;
     border-radius: 10px;
     border-style: solid;
     border-width: 2px;
     border-color: $darkestColour;
+    text-decoration: none
 }
 
 
