@@ -19,6 +19,14 @@
     margin-bottom: 5vh;
 }
 
+.login-form a:link {
+    color: $lightestColour;
+}
+
+.login-form a:visited {
+    color: $lightestColour;
+}
+
 .login-form-container {
     display: flex;
     justify-content: space-between;
