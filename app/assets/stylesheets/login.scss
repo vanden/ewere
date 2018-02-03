@@ -21,17 +21,24 @@
 
 .login-form-container {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-between;
+    flex-direction: row;
     align-items: flex-end;
     margin: 5vh 15vw 0px 0px;
 }
 
+.login-input {
+    border-radius: 5px;
+    border-color: $darkColour;
+    border-width: 1px;
+}
+
 .login-form-fields {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     flex-direction: column;
-    height: 40vh;
+    height: 18vh;
+    margin-bottom: 1vh;
 }
 
 .login-form-field-label {
