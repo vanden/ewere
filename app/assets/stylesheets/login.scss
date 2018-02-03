@@ -42,6 +42,11 @@
     text-decoration: none;
 }
 
+.login-form a:hover {
+    color: $mediumColour;
+    text-decoration: underline;
+}
+
 
 .login-form-block {
     background-color: $lightestColour;
