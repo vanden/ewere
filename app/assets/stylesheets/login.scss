@@ -1,4 +1,13 @@
 
+.login-form-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-end;
+    margin: 5vh 15vw 0px 0px;
+}
+
+
 .blurb{
     align-self: flex-start;
     display: flex;
@@ -19,60 +28,19 @@
     margin-bottom: 5vh;
 }
 
-.login-form a:link {
-    color: $lightestColour;
-}
 
-.login-form a:visited {
-    color: $lightestColour;
-}
-
-.login-form-container {
+.login-form {
     display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: flex-end;
-    margin: 5vh 15vw 0px 0px;
-}
-
-.login-input {
-    border-radius: 5px;
-    border-color: $darkColour;
-    border-width: 1px;
-}
-
-.login-form-fields {
-    display: flex;
-    justify-content: flex-end;
     flex-direction: column;
-    height: 18vh;
-    margin-bottom: 1vh;
-    margin-top: 1vh;
+    width: 25vw;
+    max-width: 250px;
 }
 
-.login-form-fields label {
-    font-size: 100%;
-    // Why does this class have no effect?
-    color: $darkestColour;
-    font-family: $title-font-primary, $title-font-secondary;
-    padding: 0px 0px 3px;
+
+.login-form a:link, a:visited {
+    color: $lightestColour;
 }
 
-h1, h2, h3  {
-    color: $darkestColour;
-    font-family: $title-font-primary, $title-font-secondary;
-}
-
-h1 {
-    font-size: 215%;
-}
-
-h2  {
-    font-size: 185%;
-}
-h3  {
-    font-size: 100%;
-}
 
 .login-form-block {
     background-color: $lightestColour;
@@ -83,23 +51,39 @@ h3  {
     border-radius: 15px;
     margin-top: 5vh;
 }
-.login-form {
+
+
+.login-form-fields {
     display: flex;
+    justify-content: flex-end;
     flex-direction: column;
-    width: 25vw;
-    max-width: 250px;
+    height: 18vh;
+    margin-bottom: 1vh;
+    margin-top: 1vh;
 }
+
+
+.login-form-fields label {
+    color: $darkestColour;
+    font-family: $title-font-primary, $title-font-secondary;
+    padding: 0px 0px 3px;
+}
+
+
+.login-input {
+    border-radius: 5px;
+    border-color: $darkColour;
+    border-width: 1px;
+}
+
+
 
 .login-buttons {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    width: 15vw;
-}
-
-.authlinks {
-    display: flex;
+    width: 10vw;
 }
 
 
@@ -109,7 +93,6 @@ h3  {
     font-size: 15px;
     font-family: $title-font-primary;
     background-color: $mediumColour;
-    text-decoration: none;
     text-align: center;
     color: $lightColour;
     padding: 8px 10px 7px 10px;
@@ -119,8 +102,8 @@ h3  {
     border-color: $darkestColour;
 }
 
+
 .authbtn:hover { 
     background-color: $lightColour;
     color: $darkestColour;
-    // border-colour: green;// $lightestColour; // why you no work? FixMe
 }

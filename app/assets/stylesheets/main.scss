@@ -34,3 +34,20 @@
     height: 100vh;
 }
 
+
+h1, h2, h3  {
+    color: $darkestColour;
+    font-family: $title-font-primary, $title-font-secondary;
+}
+
+h1 {
+    font-size: 215%;
+}
+
+h2  {
+    font-size: 185%;
+}
+h3  {
+    font-size: 100%;
+}
+

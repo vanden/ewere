@@ -13,11 +13,14 @@
     margin-right: 5vw;
     margin-top: 2vh;
     margin-bottom: 2vh;
+    display: flex;
 }
 
+
 .authlinks.authbtn {
-        background-color: $darkestColour
+    background-color: $darkestColour
 }
+
 
 .nav-bar h1 {
     margin-left: 5vw;
