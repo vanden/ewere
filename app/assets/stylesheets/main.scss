@@ -7,18 +7,12 @@
 @import "./fonts";
 
 @import "./login";
+@import "./navbar";
 
 // .gradient {
 //     background-image: linear-gradient(to bottom left, #EEF4ED 0%, #8DA9C4 25%, #134074 50%, #13315C 75%, #0B2545 100%);
 // }
 
-.nav-bar {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    background-color: $lightestColour;
-    height: 5vh;
-}
 
 // html, body, {
 //     height: 100%;

@@ -1,0 +1,25 @@
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $lightestColour;
+    height: 8vh;
+}
+
+.authlinks {
+    text-align: center;
+    justify-content: space-between;
+    width: 15vw;
+    margin-right: 5vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.authlinks.authbtn {
+        background-color: $darkestColour
+}
+
+.nav-bar h1 {
+    margin-left: 5vw;
+    margin-top: 2vh;
+}
