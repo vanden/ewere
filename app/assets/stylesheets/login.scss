@@ -1,0 +1,79 @@
+
+
+.login-form-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    margin: 5vh 15vw 0px 0px;
+}
+
+.login-form-fields {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 40vh;
+}
+
+.login-form-field-label {
+    font-size: 85%;
+    color: red;
+    font-family: $text-font-primary, $title-font-secondary;
+}
+
+h1, h2, h3  {
+    color: $darkestColour;
+    font-family: $text-font-primary, $title-font-secondary;
+}
+
+h1 {
+    font-size: 215%;
+}
+
+h2  {
+    font-size: 185%;
+}
+h3  {
+    font-size: 100%;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    max-width: 250px;
+}
+
+.login-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 15vw;
+}
+
+.authlinks {
+    display: flex;
+}
+
+
+
+.authbtn {
+    font: bold 15px $title-font-primary;
+    background-color: $mediumColour;
+    text-decoration: none;
+    text-align: center;
+    hover-color: $darkColour;
+    color: $lightColour;
+    padding: 5px 10px 5px 10px;    
+    border-radius: 10px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: $darkestColour;
+}
+
+.authbtn:hover { 
+    background-color: $lightColour;
+    color: $darkestColour;
+    // border-colour: green;// $lightestColour; // why you no work? FixMe
+}

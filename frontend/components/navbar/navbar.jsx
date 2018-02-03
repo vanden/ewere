@@ -6,12 +6,12 @@ export default ({ currentUser, logout }) => {
   const display = currentUser ? (
     <div>
       <h3>Welcome {currentUser.username}!</h3>
-      <button onClick={logout}>Logout</button>
+      <button className="authbtn" onClick={logout}>Logout</button>
     </div>
   ) : (
-    <div>
-      <Link className="btn" to="/signup">Sign Up</Link>
-      <Link className="btn" to="/login">Log In</Link>
+    <div className="authlinks">
+      <Link className="authbtn" to="/signup">Sign Up</Link>
+      <Link className="authbtn" to="/login">Log In</Link>
     </div>
   );
   return (

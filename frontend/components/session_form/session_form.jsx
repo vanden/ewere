@@ -1,6 +1,10 @@
 import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
 
+let capitalizeFirstLetter = (string) => {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
@@ -65,46 +69,47 @@ class SessionForm extends React.Component {
       </ul>
     )
     }
+    else { return '' }
   }
 
   render() {
     return (
       <div className="login-form-container">
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to ewere!
+        <form onSubmit={this.handleSubmit} className="login-form">
+          <h2>Welcome to eWere!</h2>
           <br/>
-          Please {this.props.formType} or {this.navLink()}
+          <h3>Please {this.props.formType} or {this.navLink()}</h3>
           {this.renderErrors()}
-          <div className="login-form">
-            <br/>
-            <label>Username:
+          <div className="login-formssss">
+            <div className="login-form-fields">
+              <br/>
+              <label className="login-field-label">Username: </label>
               <input type="text"
-                value={this.state.username}
-                onChange={this.update('username')}
-                className="login-input"
-              />
-            </label>
-            <br/>
-            <label>Email:
+                     value={this.state.username}
+                     onChange={this.update('username')}
+                     className="login-input"
+                     />
+              <br/>
+              <label className="login-field-label">Email: </label>
               <input type="text"
-                value={this.state.email}
-                onChange={this.update('email')}
-                className="login-input"
-              />
-            </label>
-            <br/>
-            <label>Password:
+                     value={this.state.email}
+                     onChange={this.update('email')}
+                     className="login-input"
+                     />
+              <br/>
+              <label className="login-field-label">Password:</label>
               <input type="password"
-                value={this.state.password}
-                onChange={this.update('password')}
-                className="login-input"
-              />
-            </label>
-            <br/>
-        <input type="submit" value={this.props.formType} />
-        <button className="button"
-              onClick={(e) => this.handleDemoUserSignin(e)} >Demo User Sign In</button>
-
+                     value={this.state.password}
+                     onChange={this.update('password')}
+                     className="login-input"
+                     />
+              <br/>
+            </div>
+            <div className="login-buttons">
+              <input className="authbtn" type="submit" value={capitalizeFirstLetter(this.props.formType)} />
+              <button className="authbtn"
+                      onClick={(e) => this.handleDemoUserSignin(e)} >Demo User</button>
+            </div>
           </div>
         </form>
       </div>

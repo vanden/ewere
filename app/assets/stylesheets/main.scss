@@ -1,0 +1,42 @@
+// Meyers reset
+@import "./css_reset";
+
+
+// Variable definitions
+@import "./colours";
+@import "./fonts";
+
+@import "./login";
+
+// .gradient {
+//     background-image: linear-gradient(to bottom left, #EEF4ED 0%, #8DA9C4 25%, #134074 50%, #13315C 75%, #0B2545 100%);
+// }
+
+.nav-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: $lightestColour;
+    height: 5vh;
+}
+
+// html, body, {
+//     height: 100%;
+//     width: 100%;
+// }
+
+.main-window {
+//     height: 100%;
+//     width: 100%;
+    flex-grow: 10;
+}
+
+
+.app {
+    display: flex;
+    flex-direction: column;
+    background-color: $darkColour;
+    background-image: linear-gradient(to bottom left, $lightestColour -10%, $darkestColour 120%);
+    height: 100vh;
+}
+
