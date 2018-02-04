@@ -4,7 +4,7 @@ class Api::TeamMembershipsController < ApplicationController
     @team_membership = TeamMembership.new(team_membership_params)
 
     if @team_membership.save
-      @team = team_membership.team
+      @team = @team_membership.team
       # Show a team, not all teams, right? # ThinkMore
       render "api/teams/show"
     else
