@@ -37,7 +37,6 @@ window.getAllTeams = getAllTeams
 window.postTeam = postTeam
 window.updateTeam = updateTeam
 window.deleteTeam = deleteTeam
-console.log(getTeam)
 window.getState = store.getState
 window.dispatch = store.dispatch
 
