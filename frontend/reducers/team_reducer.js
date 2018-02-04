@@ -1,12 +1,15 @@
 import { RECEIVE_TEAM,
          RECEIVE_ALL_TEAMS,
-         REMOVE_TEAM } from '../actions/team_actions'
+         REMOVE_TEAM,
+//       REMOVE_TEAM_ERRORS, // Needed? ThinkMore
+         RECEIVE_TEAM_ERRORS
+       } from '../actions/team_actions'
 
 
 const defaultState = Object.freeze({})
 
 
-const teamReducer = (state = defaultState, action) => {
+export const teamReducer = (state = defaultState, action) => {
 
   Object.freeze(state)
 
@@ -28,4 +31,22 @@ const teamReducer = (state = defaultState, action) => {
   }
 }
 
-export default teamReducer
+export const teamErrorsReducer = (state = [], action) => {
+
+  Object.freeze(state)
+
+  switch(action.type) {
+
+  case RECEIVE_TEAM:
+  case RECEIVE_ALL_TEAMS:
+  case REMOVE_TEAM:
+//  case REMOVE_TEAM_ERRORS:  // Needed? ThinkMore
+    return []
+
+  case RECEIVE_TEAM_ERRORS:
+    return action.errors;
+
+  default:
+    return state
+  }
+}
