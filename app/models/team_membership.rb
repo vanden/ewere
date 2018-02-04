@@ -1,6 +1,6 @@
 class TeamMembership < ApplicationRecord
 
-  validates :team_id, :member_id, :presence: true
+  validates :team_id, :member_id, presence: true
 
   belongs_to :member,
     class_name: 'User',
