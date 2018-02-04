@@ -59,7 +59,7 @@ const receiveTeam = (team) => {
 // FixMe Not really sure how I will be handling errors
 const receiveTeamErrors = (errors) => {
   return {
-    type: RECEIVE_TEAM_ERRORS
+    type: RECEIVE_TEAM_ERRORS,
     errors
   }
 }
