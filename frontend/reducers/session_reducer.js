@@ -14,7 +14,9 @@ const sessionReducer = (state = _nullUser, action) => {
     const currentUser = action.currentUser;
     // Is Object.assign really needed here? User was an argument, not
     // state. QUESTION
-    return Object.assign({}, { currentUser })
+    let newState = Object.assign({}, { currentUser })
+    //console.log(newState)
+    return newState
 
   default:
     return state
