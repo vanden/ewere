@@ -5,6 +5,7 @@ import configureStore from './store/store'
 
 import Root from './components/root'
 
+
 // FixMe Delete once done testing
 import { login, logout, signup } from './util/session_api_util'
 import { getAllTeams, getTeam,
@@ -13,6 +14,7 @@ import { getAllTeams, getTeam,
 
 // Move into EventListener once done testing //TODO
 let store = configureStore()
+
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -23,15 +25,13 @@ document.addEventListener('DOMContentLoaded', () => {
   } else {
     store = configureStore()
   }
-  
+
   const root = document.getElementById('root')
   ReactDOM.render(<Root store={ store } />, root)
 });
 
 
-
 // FixMe Here for testing
-
 window.getTeam = getTeam
 window.getAllTeams = getAllTeams
 window.postTeam = postTeam

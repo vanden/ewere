@@ -10,8 +10,6 @@ export const REMOVE_TEAM = "REMOVE_TEAM"
 export const RECEIVE_TEAM_ERRORS = 'RECEIVE_TEAM_ERRORS'
 
 
-
-
 export const getTeam = (id) => dispatch => {
   return APIUtil.getTeam(id)
     .then( team => dispatch(receiveTeam(team)))
@@ -39,7 +37,7 @@ export const postTeam = (newTeam) => dispatch => {
 export const updateTeam = (team) => dispatch => {
   return APIUtil.updateTeam(team)
     .then( editTeam => dispatch(receiveTeam(editTeam)))
-  // Error handling here? FixMe  
+  // Error handling here? FixMe
 }
 
 
@@ -78,5 +76,3 @@ const removeTeam = (team) => {
     team
   }
 }
-
-

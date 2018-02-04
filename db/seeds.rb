@@ -21,6 +21,3 @@ team2 = Team.create(name: "Architecture", description: "Thinking big thoughts", 
 team3 = Team.create(name: "Marketing", description: "Promote, promote, promote", creator_id: 7)
 team4 = Team.create(name: "Sales", description: "Sell, sell, sell", creator_id: 8)
 team5 = Team.create(name: "Development", description: "Developers, developers, developers, developers", creator_id: 1)
-
-
-

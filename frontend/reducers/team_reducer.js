@@ -2,7 +2,9 @@ import { RECEIVE_TEAM,
          RECEIVE_ALL_TEAMS,
          REMOVE_TEAM } from '../actions/team_actions'
 
+
 const defaultState = Object.freeze({})
+
 
 const teamReducer = (state = defaultState, action) => {
 
@@ -19,8 +21,8 @@ const teamReducer = (state = defaultState, action) => {
   case REMOVE_TEAM:
     let newState = Object.assign({}, state)
     delete newState[action.team.id]
-    return newState                         
-                         
+    return newState
+
   default:
     return state
   }
