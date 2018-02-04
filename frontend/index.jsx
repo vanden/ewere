@@ -9,7 +9,9 @@ import Root from './components/root'
 // FixMe Delete once done testing
 import { login, logout, signup } from './util/session_api_util'
 import { getAllTeams, getTeam,
-         postTeam, updateTeam, deleteTeam } from './util/team_api_util'
+         postTeam, updateTeam, deleteTeam,
+         deleteTeamMembership, postTeamMembership
+       } from './util/team_api_util'
 
 
 // Move into EventListener once done testing //TODO
@@ -32,6 +34,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // FixMe Here for testing
+window.deleteTeamMembership = deleteTeamMembership
+window.postTeamMembership = postTeamMembership
 window.getTeam = getTeam
 window.getAllTeams = getAllTeams
 window.postTeam = postTeam
@@ -39,7 +43,6 @@ window.updateTeam = updateTeam
 window.deleteTeam = deleteTeam
 window.getState = store.getState
 window.dispatch = store.dispatch
-
 window.login = login
 window.logout = logout
 window.signup = signup
