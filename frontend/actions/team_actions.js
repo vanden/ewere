@@ -80,6 +80,21 @@ const removeTeam = (team) => {
   }
 }
 
+
+export const postTeamMembership = (newMembership) => dispatch => {
+  return APIUtil.postTeamMembership(newMembership)
+    .then ( team => dispatch(receiveTeam(team)))
+  // Error handling?
+}
+
+export const deleteTeamMembership = (membership) => dispatch => {
+  return APIUtil.deleteTeamMembership(membership)
+    .then( team => dispatch(receiveTeam(team)))
+  // A bit dark, here. What comes back from the APIUtil call? What
+  // determines that?
+}
+
+
 // Needed? ThinkMore
 // const removeTeamErrors = () => {
 //   return {

@@ -5,12 +5,14 @@ export const getTeam = (id) => {
   })
 }
 
+
 export const getAllTeams = () => {
   return $.ajax({
     url: '/api/teams',
     method: 'GET'
   })
 }
+
 
 export const postTeam = (team) => {
   return $.ajax({
@@ -20,6 +22,7 @@ export const postTeam = (team) => {
   })
 }
 
+
 export const updateTeam = (team) => {
   return $.ajax({
     url: `/api/teams/${team.id}`,
@@ -28,6 +31,7 @@ export const updateTeam = (team) => {
   })
 }
 
+
 export const deleteTeam = (id) => {
   return $.ajax({
     url: `/api/teams/${id}`,
@@ -35,4 +39,21 @@ export const deleteTeam = (id) => {
   })
 }
 
-// ToDo will need team membership ones, too
+// Team memberships
+// Seems silly to have a seperate file as there's not much, here
+
+export const postTeamMembership = (teamMembership) => {
+  return $.ajax({
+    url: 'api/team_memberships/',
+    method: 'POST',
+    data: { team_membership: teamMembership }
+  })
+}
+
+
+export const deleteTeamMembership = (id) => (
+  $.ajax({
+    url: `api/team_memberships/${id}`,
+    method: 'DELETE',
+  })
+);
