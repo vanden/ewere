@@ -8,7 +8,7 @@ export const REMOVE_TEAM = "REMOVE_TEAM"
 
 // FixMe Not really sure how I will be handling errors
 export const RECEIVE_TEAM_ERRORS = 'RECEIVE_TEAM_ERRORS'
-
+//export const REMOVE_TEAM_ERRORS = 'REMOVE_TEAM_ERRORS' // Needed? ThinkMore
 
 export const getTeam = (id) => dispatch => {
   return APIUtil.getTeam(id)
@@ -29,21 +29,25 @@ export const postTeam = (newTeam) => dispatch => {
   // (But, will there be more than a single place on the other end?
   // ThinkMore
   return APIUtil.postTeam(newTeam)
-    .then( team => dispatch(receiveTeam(team)))
-  // Error handling here? FixMe
+    .then( team => dispatch(receiveTeam(team)),
+           err => (dispatch(receiveTeamErrors(err.responseJSON))))
+  // Error handling here? Am I doing this right? FixMe
 }
 
 
 export const updateTeam = (team) => dispatch => {
   return APIUtil.updateTeam(team)
-    .then( editTeam => dispatch(receiveTeam(editTeam)))
-  // Error handling here? FixMe
+    .then( editTeam => dispatch(receiveTeam(editTeam)),
+           err => (dispatch(receiveTeamErrors(err.responseJSON))))
+  // Error handling here? Am I doing this right? FixMe
 }
 
 
 export const deleteTeam = (id) => dispatch => {
   return APIUtil.deleteTeam(id)
-    .then( deadTeam => dispatch(removeTeam(deadTeam)))
+    .then( deadTeam => dispatch(removeTeam(deadTeam)),
+           err => (dispatch(receiveTeamErrors(err.responseJSON))))
+  // Error handling here? Am I doing this right? FixMe)
 }
 
 const receiveTeam = (team) => {
@@ -54,7 +58,6 @@ const receiveTeam = (team) => {
 }
 
 
-// FixMe Not really sure how I will be handling errors
 const receiveTeamErrors = (errors) => {
   return {
     type: RECEIVE_TEAM_ERRORS,
@@ -76,3 +79,10 @@ const removeTeam = (team) => {
     team
   }
 }
+
+// Needed? ThinkMore
+// const removeTeamErrors = () => {
+//   return {
+//     type: REMOVE_TEAM_ERRORS
+//   }
+// }
