@@ -18,6 +18,10 @@ class User < ApplicationRecord
 
   has_many :teams, through: :team_memberships, source: :team
 
+  has_many :owned_projects,
+           class_name: :Project,
+           foreign_key: :owner_id
+
 
   # has_many :projects
   # can I have may task and have many task through projects?
