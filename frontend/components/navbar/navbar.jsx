@@ -11,7 +11,7 @@ export default ({ currentUser, logout, pathname, clearErrors }) => {
   }
 
   const display = currentUser ? (
-    <div>
+    <div className="welcome"  className="authlinks">
       <h3>Welcome {currentUser.username}!</h3>
       <button className="authbtn" onClick={logout}>Logout</button>
     </div>

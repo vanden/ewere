@@ -25,3 +25,17 @@
     margin-left: 5vw;
     margin-top: 2vh;
 }
+
+.welcome {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    justify-content: space-between;
+}
+
+.welcome, .authlinks h3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
