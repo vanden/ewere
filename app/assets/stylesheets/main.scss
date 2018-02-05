@@ -29,7 +29,7 @@
 .app {
     display: flex;
     flex-direction: column;
-    background-color: $darkColour;
+    background-color: $lightColour;
     height: 100vh;  // 100% is *not* what is wanted
 }
 
