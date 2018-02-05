@@ -34,3 +34,9 @@ TeamMembership.create(team_id: team1.id, member_id: user4.id)
 TeamMembership.create(team_id: team3.id, member_id: user3.id)
 TeamMembership.create(team_id: team5.id, member_id: user6.id)
 TeamMembership.create(team_id: team2.id, member_id: user2.id)
+
+
+proj1 = Project.create(name: "Develop eWere", description: "Build tool to manage tasks", owner_id: 2, team_id: team5.id)
+proj2 = Project.create(name: "Design eWere", description: "Think big thoughts about task management", owner_id: 2, team_id: team2.id)
+proj3 = Project.create(name: "Design eWere's successor", description: "Think even bigger thoughts about task management", owner_id: team2.creator_id, team_id: team2.id)
+project4 = Project.create(name: "Study market for eWere", description: "Determine if there is space for eWere in the marketplace", owner_id: team3.creator_id, team_id: team3.id)
