@@ -27,6 +27,7 @@ class Api::TeamsController < ApplicationController
 
 
   def index
+    // Filter by current user
     @teams = Team.all
   end
 
