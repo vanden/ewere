@@ -1,45 +1,70 @@
 
-.login-buttons, .login-form, .login-form-container, .blurb, .login-form-fields {
+.login-buttons, .login-form-fields, .sessions_screen {
     display: flex;
 
+}
+
+.sessions_screen {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom right, $lightestColour 3%, $darkestColour 110%);
+    height: 92vh;
+}
+
+.login-form-container, .blurb, .login-form,  {
+    display: flex;
 }
 
 .login-form-container {
     justify-content: space-between;
     flex-direction: row;
-    align-items: flex-end;
-    margin: 5vh 15vw 0px 0px;
+    align-items: flex-start;
+    max-width: 90vw;
+    width: 100%;
+    height: 100%;
 }
 
 
 .blurb, .slogan{
     font-family: $title-font-primary, $title-font-secondary;
+    color: $darkColour;
 }
 
-.blurb{
+.marketing{
     align-self: flex-start;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    color: $darkColour;
-    font-size: 145%;
-    font-weight: 600;
-    margin-left: 15vw;
-    margin-right: 22.5vw;
+    padding-left: 15%;
 }
 
+.blurb {
+    font-size: 145%;
+    font-weight: 600;
+}
 
 .slogan{
-    font-size: 180%;
-    margin-top: 5vh;
+    font-size: 280%;
     margin-bottom: 5vh;
+    padding-top: 20%;
+    padding-right: 15%;
 }
 
 
 .login-form {
     flex-direction: column;
     width: 30vw;
+    padding: 0px 10% 0px 15%;
     max-width: 290px;
+    border: 1px dashed red;
+}
+
+.login-form h2 {
+    padding-top: 15%;
+}
+
+.login-form h2 h3 {
 }
 
 
@@ -62,6 +87,8 @@
     padding: 10px 2vw;
     border-radius: 15px;
     margin-top: 5vh;
+        border: 1px dashed red;
+
 }
 
 
