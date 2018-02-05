@@ -48,8 +48,10 @@ class Api::TeamsController < ApplicationController
 
   private
 
-
   def team_params
+    # shouldn't this also have creator_id? (Once it is changed to
+    # owner_id, anyway?) Or, should that just be handled by setting it
+    # to the current user? # ThinkMore
     params.require(:team).permit(:name, :description)
   end
 end

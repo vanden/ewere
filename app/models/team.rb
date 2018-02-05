@@ -10,4 +10,7 @@ class Team < ApplicationRecord
            foreign_key: :team_id
 
   has_many :members, through: :team_memberships, source: :user
+
+  has_many :projects,
+           foreign_key: :team_id
 end
