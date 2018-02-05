@@ -1,6 +1,10 @@
 
-.login-form-container {
+.login-buttons, .login-form, .login-form-container, .blurb, .login-form-fields {
     display: flex;
+
+}
+
+.login-form-container {
     justify-content: space-between;
     flex-direction: row;
     align-items: flex-end;
@@ -8,14 +12,17 @@
 }
 
 
+.blurb, .slogan{
+    font-family: $title-font-primary, $title-font-secondary;
+}
+
 .blurb{
     align-self: flex-start;
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     color: $darkColour;
-    font-size: 155%;
+    font-size: 145%;
     font-weight: 600;
     margin-left: 15vw;
     margin-right: 22.5vw;
@@ -23,14 +30,13 @@
 
 
 .slogan{
-    font-size: 220%;
+    font-size: 180%;
     margin-top: 5vh;
     margin-bottom: 5vh;
 }
 
 
 .login-form {
-    display: flex;
     flex-direction: column;
     width: 30vw;
     max-width: 290px;
@@ -60,10 +66,9 @@
 
 
 .login-form-fields {
-    display: flex;
     justify-content: flex-end;
     flex-direction: column;
-    height: 18vh;
+    height: 18%;
     margin-bottom: 1vh;
     margin-top: 1vh;
 }
@@ -85,7 +90,6 @@
 
 
 .login-buttons {
-    display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
