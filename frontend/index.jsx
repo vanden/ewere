@@ -12,6 +12,9 @@ import { getAllTeams, getTeam,
          postTeam, updateTeam, deleteTeam,
          deleteTeamMembership, postTeamMembership
        } from './util/team_api_util'
+import { getAllProjects, getProject,
+         postProject, updateProject, deleteProject
+       } from './util/project_api_util'
 
 
 // Move into EventListener once done testing //TODO
@@ -41,6 +44,11 @@ window.getAllTeams = getAllTeams
 window.postTeam = postTeam
 window.updateTeam = updateTeam
 window.deleteTeam = deleteTeam
+window.getProject = getProject
+window.getAllProjects = getAllProjects
+window.postProject = postProject
+window.updateProject = updateProject
+window.deleteProject = deleteProject
 window.getState = store.getState
 window.dispatch = store.dispatch
 window.login = login
