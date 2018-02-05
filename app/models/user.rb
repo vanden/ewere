@@ -10,11 +10,11 @@ class User < ApplicationRecord
   # has_many :tasks
 
   has_many :created_teams,
-    class_name: 'Team',
-    foreign_key: :creator_id
+           class_name: 'Team',
+           foreign_key: :creator_id
 
   has_many :team_memberships,
-    foreign_key: :member_id
+           foreign_key: :member_id
 
   has_many :teams, through: :team_memberships, source: :team
 
