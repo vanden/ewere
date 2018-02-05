@@ -49,7 +49,7 @@ export const deleteProject = (id) => dispatch => {
            err => (dispatch(receiveProjectErrors(err.responseJSON))))
   // Error handling here? Am I doing this right? FixMe)
 }
-////////////////////////////////
+
 const receiveProject = (project) => {
   return {
     type: RECEIVE_PROJECT,
