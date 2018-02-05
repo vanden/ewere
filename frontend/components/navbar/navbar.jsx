@@ -22,7 +22,9 @@ export default ({ currentUser, logout, pathname, clearErrors }) => {
   );
   return (
     <header className="nav-bar">
-      <h1 className="logo">eWere</h1>
+      <Link to="/" className="logo" >
+        <h1 >eWere</h1>
+      </Link>
         {display}
     </header>
   )
