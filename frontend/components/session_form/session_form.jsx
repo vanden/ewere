@@ -45,7 +45,7 @@ class SessionForm extends React.Component {
       password:"password"
     }
     this.props.demoUserSignIn(demoUser)
-      .then( () => {//should add to history, I guess
+      .then( () => {//should add to history, I guess  #FixMe
       })
     }
 
