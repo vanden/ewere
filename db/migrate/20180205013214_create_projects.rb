@@ -1,12 +1,17 @@
 class CreateProjects < ActiveRecord::Migration[5.1]
   def change
     create_table :projects do |t|
-      t.string :name
-      t.integer :owner_id
-      t.integer :team_id
+
+      # Should this be scoped to the Team? How? # FixMe
+      t.string :name, null: false, unique: true
+      t.integer :owner_id, null: false
+      t.integer :team_id, null: false
+      # I guess I should allow an empty description # ThinkMore
       t.text :description
 
       t.timestamps
     end
+    add_index :projects, :owner_id
+    add_index :projects, :team_id
   end
 end
