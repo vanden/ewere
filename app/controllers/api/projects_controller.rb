@@ -9,7 +9,7 @@ class Api::ProjectsController < ApplicationController
     unless @project.owner_id then @project.owner_id = current_user.id end
 
     if @project.save
-      render: show
+      render :show
     else
       render json: @project.errors.full_messages, status 422
     end
