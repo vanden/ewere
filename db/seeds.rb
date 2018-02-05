@@ -20,4 +20,17 @@ team1 = Team.create(name: "Operations", description: "In charge of all things op
 team2 = Team.create(name: "Architecture", description: "Thinking big thoughts", creator_id: 6)
 team3 = Team.create(name: "Marketing", description: "Promote, promote, promote", creator_id: 7)
 team4 = Team.create(name: "Sales", description: "Sell, sell, sell", creator_id: 8)
-team5 = Team.create(name: "Development", description: "Developers, developers, developers, developers", creator_id: 1)
+team5 = Team.create(name: "Development", description: "Developers, developers, developers, developers", creator_id: 2)
+
+# Add team creators as members:
+TeamMembership.create(team_id: team1.id, member_id: team1.creator_id)
+TeamMembership.create(team_id: team2.id, member_id: team2.creator_id)
+TeamMembership.create(team_id: team3.id, member_id: team3.creator_id)
+TeamMembership.create(team_id: team4.id, member_id: team4.creator_id)
+TeamMembership.create(team_id: team5.id, member_id: team5.creator_id)
+
+# Add some more members
+TeamMembership.create(team_id: team1.id, member_id: user4.id)
+TeamMembership.create(team_id: team3.id, member_id: user3.id)
+TeamMembership.create(team_id: team5.id, member_id: user6.id)
+TeamMembership.create(team_id: team2.id, member_id: user2.id)

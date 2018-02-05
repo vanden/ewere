@@ -7,11 +7,8 @@ class Api::TeamsController < ApplicationController
     @team.creator_id = current_user.id
 
     if @team.save
-      # Temporarily commented out as TeamMembership.create does not yet
-      # exist
-      # TeamMembership.create(
-      #            member_id: current_user.id, team_id: @team.id)
-      #
+      TeamMembership.create(
+                 member_id: current_user.id, team_id: @team.id)
       render :show
     else
       render json: @team.errors.full_messages, status: 422
