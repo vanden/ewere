@@ -16,7 +16,7 @@ export const teamReducer = (state = defaultState, action) => {
   switch (action.type) {
 
   case RECEIVE_TEAM:
-    return Object.assign({}, state, { [action.team]: action.team })
+    return Object.assign({}, state, { [action.team.id]: action.team })
 
   case RECEIVE_ALL_TEAMS:
     return Object.assign({}, action.teams)
