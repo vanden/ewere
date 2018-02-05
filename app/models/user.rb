@@ -7,7 +7,6 @@ class User < ApplicationRecord
   after_initialize :ensure_session_token
   attr_reader :password
 
-  # has_many :tasks
 
   has_many :created_teams,
            class_name: 'Team',
@@ -22,8 +21,9 @@ class User < ApplicationRecord
            class_name: :Project,
            foreign_key: :owner_id
 
+  has_many :projects, through: :teams
 
-  # has_many :projects
+  # has_many :tasks
   # can I have may task and have many task through projects?
 
 
