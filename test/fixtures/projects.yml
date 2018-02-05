@@ -2,12 +2,12 @@
 
 one:
   name: MyString
-  creator_id: 1
+  owner_id: 1
   team_id: 1
   description: MyText
 
 two:
   name: MyString
-  creator_id: 1
+  owner_id: 1
   team_id: 1
   description: MyText

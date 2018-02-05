@@ -1,13 +1,13 @@
 class Project < ApplicationRecord
 
-  validates :creator_id, :team_id, :description, presence: true
+  validates :owner_id, :team_id, :description, presence: true
 
   # It would be better to scope the uniqueness to the team, wouldn't
   # it? # ThinkMore
   validates :name, presence: true, uniqueness: true
 
-  belongs_to :creator,
-             foreign_key: :creator_id,
+  belongs_to :owner,
+             foreign_key: :owner_id,
              class_name: :User
 
   belongs_to :team,
