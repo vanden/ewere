@@ -8,7 +8,17 @@ class User < ApplicationRecord
   attr_reader :password
 
   # has_many :tasks
-  # has_many :teams
+
+  has_many :created_teams,
+    class_name: 'Team',
+    foreign_key: :creator_id
+
+  has_many :team_memberships,
+    foreign_key: :member_id
+
+  has_many :teams, through: :team_memberships, source: :team
+
+
   # has_many :projects
   # can I have may task and have many task through projects?
 
