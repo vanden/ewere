@@ -6,8 +6,8 @@ import MainPage from './main_page'
 
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(state)
-  console.log(ownProps)
+  // console.log(state)
+  // console.log(ownProps)
   return {
     loggedIn: Boolean(state.session.currentUser),
     errors: state.errors,
@@ -16,8 +16,8 @@ const mapStateToProps = (state, ownProps) => {
   }}
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  console.log(ownProps)
-  console.log(dispatch)
+  // console.log(ownProps)
+  // console.log(dispatch)
   // put the relevANT thunk actions ie getAllTeam in the props
   return {
     

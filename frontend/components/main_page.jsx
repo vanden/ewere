@@ -8,7 +8,6 @@ class MainPage extends React.Component {
   }
 
   render() {
-    console.log("HERE")
     return (
       <div> 
         <h3>Hello Main Page World</h3>
