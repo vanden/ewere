@@ -96,8 +96,6 @@
     justify-content: flex-end;
     flex-direction: column;
     height: 18%;
-    margin-bottom: 1vh;
-    margin-top: 1vh;
 }
 
 
@@ -109,9 +107,16 @@
 
 
 .login-input {
+    font-weight: bold;
+    font-size: 18px;
+    font-color: $darkestColour;
     border-radius: 5px;
     border-color: $darkColour;
     border-width: 1px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 
@@ -137,7 +142,7 @@
     border-style: solid;
     border-width: 2px;
     border-color: $darkestColour;
-    text-decoration: none
+    text-decoration: none;
 }
 
 
