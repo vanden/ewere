@@ -9,6 +9,10 @@
 @import "./login";
 @import "./navbar";
 @import "./teams";
+@import "./projects";
+@import "./sidebar";
+@import "./dashboard";
+
 // .gradient {
 //     background-image: linear-gradient(to bottom left, #EEF4ED 0%, #8DA9C4 25%, #134074 50%, #13315C 75%, #0B2545 100%);
 // }
@@ -19,12 +23,21 @@
 //     width: 100%;
 // }
 
-.main-window {
-//     height: 100%;
-//     width: 100%;
-    flex-grow: 10;
+.main-window {  // This is everything beneath the navbar in all views
+    height: 92vh;
+    width: 100%;
+    background-color: $lightColour;
+ //   flex-grow: 10;  // Why was this here?
 }
 
+
+.mainpage {  // This is everything beneath the navbar in all none login/signup views
+    background-color: $lightestColour;
+    height: 100%;
+    width: 100%;
+    display: flex;
+
+}
 
 .app {
     display: flex;
@@ -49,4 +62,3 @@ h2  {
 h3  {
     font-size: 100%;
 }
-

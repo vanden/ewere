@@ -18,7 +18,7 @@ class TeamIndex extends React.Component {
         <h2>Teams</h2>
         <ul>
           {this.props.teams.map( team => (
-            <TeamIndexItem
+            <TeamIndexItem className="team-list-item"
               key={team.id}
               team={team}
               getTeam={this.props.getTeam}
@@ -27,8 +27,8 @@ class TeamIndex extends React.Component {
           ))}
         </ul>
       </div>
-    );
+    )
   }
 }
 
-export default TeamIndex;
+export default TeamIndex

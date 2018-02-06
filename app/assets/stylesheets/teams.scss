@@ -1,3 +1,9 @@
+
+.teamlist {
+
+    padding-bottom: 25px;
+}
+
 // Why this no work? QUESTION
 .teamlist a:link a:visited {
     text-decoration: none;
@@ -24,3 +30,4 @@ a.TeamLink:hover {
     color: $lightColour;
     cursor: pointer;
 }
+
