@@ -1,0 +1,26 @@
+// Why this no work? QUESTION
+.teamlist a:link a:visited {
+    text-decoration: none;
+    color: red;
+}
+
+
+.team-list-item a:link a:visited {
+    text-decoration: none;
+    color: red;
+}
+
+
+.team-listing-item a:link a:visited {
+    text-decoration: none;
+    color: red;
+}
+
+a.TeamLink {
+    text-decoration: none;
+    color: $darkColour;
+}
+a.TeamLink:hover {
+    color: $lightColour;
+    cursor: pointer;
+}

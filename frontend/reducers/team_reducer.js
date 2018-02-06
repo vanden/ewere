@@ -10,7 +10,6 @@ const defaultState = Object.freeze({})
 
 
 export const teamReducer = (state = defaultState, action) => {
-
   Object.freeze(state)
 
   switch (action.type) {
@@ -44,7 +43,8 @@ export const teamErrorsReducer = (state = [], action) => {
     return []
 
   case RECEIVE_TEAM_ERRORS:
-    return action.errors;
+    // Should this return Oject.assign({}, state, action.errors) instead?
+    return action.errors || [];
 
   default:
     return state
