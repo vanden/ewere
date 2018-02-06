@@ -13,9 +13,11 @@ class SideBar extends React.Component {
     return (
       <div className="sidebar">
         <TeamIndexContainer />
+        PROJECTS GO HERE
       </div>
     );
   }
 }
 
 export default SideBar;
+//        <ProjectIndexContainer />

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, withRouter } from 'react-router-dom'
-import SideBarContainer from './sidebar/sidebar_container.jsx'
-
+import SideBarContainer from './sidebar/sidebar_container'
+import DashBoardContainer from './dashboard/dashboard_container'
 
 class MainPage extends React.Component {
 
@@ -11,15 +11,14 @@ class MainPage extends React.Component {
 
   render() {
     return (
-      <div> 
-        <h3>Hello Main Page World</h3>
+      <div className="mainpage">
         <SideBarContainer />
+        <DashBoardContainer />
       </div>
 
     )
   }
 }
-//        <DashboardContainer />
 
 //        <TeamIndexContainer />
 
