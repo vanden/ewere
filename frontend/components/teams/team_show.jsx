@@ -13,6 +13,10 @@ class TeamShow extends React.Component {
 //    this.props.fetchTeams()
   }
 
+  componentWillReceiveProps(){
+//fetch team here
+  }
+
   render () {
     return (
       <div className="teamshow">
