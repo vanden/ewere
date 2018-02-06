@@ -8,7 +8,7 @@
 
 @import "./login";
 @import "./navbar";
-
+@import "./teams";
 // .gradient {
 //     background-image: linear-gradient(to bottom left, #EEF4ED 0%, #8DA9C4 25%, #134074 50%, #13315C 75%, #0B2545 100%);
 // }
@@ -29,7 +29,7 @@
 .app {
     display: flex;
     flex-direction: column;
-    background-color: $lightColour;
+    background-color: $lightestColour;
     height: 100vh;  // 100% is *not* what is wanted
 }
 
