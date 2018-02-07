@@ -1,5 +1,7 @@
 import { connect } from 'react-redux'
 import DashBoard from './dashboard'
+import { withRouter } from 'react-router-dom'
+
 // ACTION IMPORTS? import { getAllTeams, deleteTeam, postTeam, getTeam } from '../../actions/team_actions';
 
 
@@ -16,4 +18,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     // getTeam: (id) => dispatch(getTeam(id))
   }}
 
-export default connect(mapStateToProps, mapDispatchToProps)(DashBoard)
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(DashBoard))

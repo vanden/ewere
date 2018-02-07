@@ -10,7 +10,12 @@ const mapStateToProps = (state, ownProps) => {
   console.log(state)
   console.log("From team show container map state to props")
   return {
-    dummy: true
+
+    team_id: ownProps.match.params.team_id,
+
+    // David suggested, but undefined. Async? Or, borked?
+    // I had the team_id one
+    team: state.teams[ownProps.match.params.team_id]
   }
   //  teams: Object.values(state.teams)
 }
