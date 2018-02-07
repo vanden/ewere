@@ -10,14 +10,18 @@ class TeamShow extends React.Component {
   }
 
   componentDidMount() {
-//    this.props.fetchTeams()
+    this.props.getTeam(this.props.match.params.team_id)
   }
 
-  componentWillReceiveProps(){
+  componentWillReceiveProps(nextProps){
+    if (this.props.match.params.team_id != nextProps.match.params.team_id) {
+      this.props.getTeam(nextProps.match.params.team_id)
+    }
 //fetch team here
   }
 
   render () {
+    if (!this.props.team) { return "Loading ..." }
     return (
       <div className="teamshow">
         <h2>Teams Show Page</h2>
