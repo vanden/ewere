@@ -9,14 +9,14 @@ import { RECEIVE_TEAM } from '../actions/team_actions'
 const defaultState = Object.freeze({})
 
 
-const projectReducer = (state = defaultState, action) => {
+export const projectReducer = (state = defaultState, action) => {
 
   Object.freeze(state)
 
   switch (action.type) {
 
   case RECEIVE_TEAM:
-    return action.payload.projects;
+    return Object.assign({}, action.payload.projects)
     
   case RECEIVE_PROJECT:
     const project = action.payload.project
@@ -34,5 +34,3 @@ const projectReducer = (state = defaultState, action) => {
     return state
   }
 }
-
-export default projectReducer

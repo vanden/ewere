@@ -19,9 +19,9 @@ class DashBoard extends React.Component {
 
   constructor(props, ownProps) {
     super(props)
-    console.log(ownProps)
-    console.log(props)
-    console.log("FROM DashBoard constructor")
+    // console.log(ownProps)
+    // console.log(props)
+    // console.log("FROM DashBoard constructor")
   }
 
   componentDidMount() {
@@ -37,8 +37,8 @@ class DashBoard extends React.Component {
   
 
   render () {
-    console.log(this.props)
-    console.log("FROM DashBoard Render")
+    // console.log(this.props)
+    // console.log("FROM DashBoard Render")
     return (
       <div className="dashboard">
         <h4>Hello Sad Dashboard World</h4>

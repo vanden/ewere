@@ -11,13 +11,10 @@ const defaultState = Object.freeze({})
 
 export const teamReducer = (state = defaultState, action) => {
   Object.freeze(state)
-  console.log(state)
-  console.log('**************TEAMREDUCER*************')
+
   switch (action.type) {
 
   case RECEIVE_TEAM:
-    console.log("GETTING A TEAM")
-    console.log(action)
     const team = action.payload.team
     return Object.assign({}, state, { [team.id]: team })
 

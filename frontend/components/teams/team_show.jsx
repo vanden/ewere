@@ -5,8 +5,8 @@ class TeamShow extends React.Component {
 
   constructor(props, ownProps) {
     super(props)
-    console.log(props)
-    console.log("FROM TEAMSHOW CONSTRUCTOR")
+    // console.log(props)
+    // console.log("FROM TEAMSHOW CONSTRUCTOR")
   }
 
   componentDidMount() {
@@ -14,9 +14,9 @@ class TeamShow extends React.Component {
   }
 
   componentWillReceiveProps(nextProps){
-    console.log('---------')
-    console.log(nextProps)
-    console.log("NEXT --^")
+    // console.log('---------')
+    // console.log(nextProps)
+    // console.log("NEXT --^")
     if (this.props.match.params.team_id != nextProps.match.params.team_id) {
       this.props.getTeam(nextProps.match.params.team_id)
     }

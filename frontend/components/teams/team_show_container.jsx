@@ -6,9 +6,9 @@ import { getAllTeams, deleteTeam, postTeam, getTeam } from '../../actions/team_a
 
 
 const mapStateToProps = (state, ownProps) => {
-  console.log(ownProps)
-  console.log(state)
-  console.log("From team show container map state to props")
+  // console.log(ownProps)
+  // console.log(state)
+  // console.log("From team show container map state to props")
   return {
 
     team_id: ownProps.match.params.team_id,
@@ -23,7 +23,7 @@ const mapStateToProps = (state, ownProps) => {
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-  console.log(ownProps)
+//  console.log(ownProps)
   return {
     getTeam: (id) => dispatch(getTeam(id))
   }}
