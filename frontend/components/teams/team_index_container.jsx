@@ -4,7 +4,7 @@ import { getAllTeams, deleteTeam, postTeam, getTeam } from '../../actions/team_a
 
 
 const mapStateToProps = (state) => ({
-  teams: Object.values(state.teams)
+  teams: Object.values(state.entities.teams)
 })
 
 const mapDispatchToProps = (dispatch, ownProps) => {
