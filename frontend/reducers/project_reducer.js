@@ -19,7 +19,8 @@ const projectReducer = (state = defaultState, action) => {
     return action.payload.projects;
     
   case RECEIVE_PROJECT:
-    return Object.assign({}, state, { [action.project.id]: action.project })
+    const project = action.payload.project
+    return Object.assign({}, state, { [project.id]: project })
 
   case RECEIVE_ALL_PROJECTS:
     return Object.assign({}, action.projects)
