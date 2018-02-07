@@ -9,7 +9,7 @@ import { RECEIVE_TEAM } from '../actions/team_actions'
 const defaultState = Object.freeze({})
 
 
-const projectReducer = (state = defaultState, action) => {
+export const projectReducer = (state = defaultState, action) => {
 
   Object.freeze(state)
 
@@ -34,5 +34,3 @@ const projectReducer = (state = defaultState, action) => {
     return state
   }
 }
-
-export default projectReducer
