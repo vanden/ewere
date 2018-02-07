@@ -10,11 +10,6 @@ json.members do
   end
 end
 
-json.projects do
-  # make project a ruby hash FixMe  # Follow model in index
-  json.array! team.projects, :id, :name, :description
-end
-
 # This makes everything fall apart, yet was modeled on members one
 # that Aaron worked out for me. Wut
 #
