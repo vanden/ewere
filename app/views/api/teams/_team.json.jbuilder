@@ -8,4 +8,6 @@ json.members do
 end
 
 json.projects do
-  json.array! team.project, :id:, :name, :description
+  # make proctes a hash ruby
+  json.array! team.projects, :id, :name, :description
+end
