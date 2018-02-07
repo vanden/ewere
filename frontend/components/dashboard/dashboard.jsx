@@ -10,6 +10,7 @@ import {
 import { AuthRoute, ProtectedRoute } from '../../util/route_util'
 
 import TeamShowContainer from '../teams/team_show_container.jsx'
+import ProjectShowContainer from '../projects/project_show_container.jsx'
 
 
 
@@ -43,6 +44,8 @@ class DashBoard extends React.Component {
         <h4>Hello Sad Dashboard World</h4>
         <Switch>
           <Route exact path='/teams/:team_id' component={TeamShowContainer} />
+          <Route exact path='/projects/:project_id'
+                 component={ProjectShowContainer} />
         </Switch>
       </div>
     )
