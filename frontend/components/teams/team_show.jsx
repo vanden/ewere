@@ -14,6 +14,9 @@ class TeamShow extends React.Component {
   }
 
   componentWillReceiveProps(nextProps){
+    console.log('---------')
+    console.log(nextProps)
+    console.log("NEXT --^")
     if (this.props.match.params.team_id != nextProps.match.params.team_id) {
       this.props.getTeam(nextProps.match.params.team_id)
     }
