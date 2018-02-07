@@ -3,14 +3,12 @@ json.team do
 end
 
 json.members do
-  json.array! team.members, :id, :username
+  team.members.each do |member|
+    json.set! member.id do
+    json.extract! member, :id, :username
+    end
+  end
 end
-# json.members.each do |member|
-#   json.set! member.id do
-#     json.extract! member, :id, :username
-#   end
-# end
-
 
 json.projects do
   # make project a ruby hash FixMe  # Follow model in index
