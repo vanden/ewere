@@ -5,6 +5,11 @@ end
 json.members do
   json.array! team.members, :id, :username
 end
+# json.members.each do |member|
+#   json.set! member.id do
+#     json.extract! member, :id, :username
+#   end
+# end
 
 
 json.projects do
