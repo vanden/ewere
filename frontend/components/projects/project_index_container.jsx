@@ -4,7 +4,7 @@ import { getAllProjects, deleteProject, postProject, getProject } from '../../ac
 
 
 const mapStateToProps = (state) => ({
-  projects: Object.values(state.projects)
+  projects: Object.values(state.entities.projects)
 })
 
 
