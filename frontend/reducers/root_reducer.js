@@ -4,11 +4,8 @@ import { sessionReducer } from './session_reducer'
 import errors from './errors_reducer'
 import { teamReducer } from './team_reducer'
 import projects from './project_reducer'
+import entitiesReducer from './entities_reducer'
 
-const entitiesReducer = combineReducers({
-  teams: teamReducer,
-  projects,  
-})
 
 
 const rootReducer = combineReducers({
