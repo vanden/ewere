@@ -4,7 +4,7 @@ import { RECEIVE_PROJECT,
 //       REMOVE_PROJECT_ERRORS, // Needed? ThinkMore
          RECEIVE_PROJECT_ERRORS
        } from '../actions/project_actions'
-
+import { RECEIVE_TEAM } from '../actions/team_actions'
 
 const defaultState = Object.freeze({})
 
@@ -15,6 +15,9 @@ const projectReducer = (state = defaultState, action) => {
 
   switch (action.type) {
 
+  case RECEIVE_TEAM:
+    return action.payload.projects;
+    
   case RECEIVE_PROJECT:
     return Object.assign({}, state, { [action.project.id]: action.project })
 
