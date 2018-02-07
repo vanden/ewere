@@ -5,7 +5,7 @@ class TeamShow extends React.Component {
 
   constructor(props, ownProps) {
     super(props)
-    console.log(ownProps)
+    console.log(props)
     console.log("FROM TEAMSHOW CONSTRUCTOR")
   }
 
