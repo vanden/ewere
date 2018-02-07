@@ -16,7 +16,11 @@ const projectReducer = (state = defaultState, action) => {
   switch (action.type) {
 
   case RECEIVE_TEAM:
-    return action.payload.projects;
+    console.log(action)
+    console.log("FROM projectReducer RECEIVE_TEAM ----^")
+    let projects = action.payload.projects;
+    projects.push("WHAT?!")
+    return projects;
     
   case RECEIVE_PROJECT:
     const project = action.payload.project
