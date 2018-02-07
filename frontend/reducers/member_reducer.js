@@ -8,8 +8,6 @@ export const membersReducer = (state = {}, action) => {
 
   case RECEIVE_TEAM:
   case RECEIVE_PROJECT:
-    console.log(action.payload)
-    console.log(55555555555555)
     return action.payload.members
   default:
     return state
