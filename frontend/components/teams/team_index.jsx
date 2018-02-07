@@ -12,6 +12,8 @@ class TeamIndex extends React.Component {
     this.props.fetchTeams()
   }
 
+  // Also will need a willRecieveProps
+  
   render () {
     return (
       <div className="teamlist">

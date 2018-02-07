@@ -13,9 +13,11 @@ const mapStateToProps = (state, ownProps) => {
 
     team_id: ownProps.match.params.team_id,
 
-    // David suggested, but undefined. Async? Or, borked?
-    // I had the team_id one
-    team: state.teams[ownProps.match.params.team_id]
+    // David suggested, but undefined. Async? Or, borked? I had the
+    // team_id one Aaron agreed this the way to go. Needs a
+    // conditional guard. (Don't really understand. But, only set it
+    // if not null in state. WUT
+    team: state.entities.teams[ownProps.match.params.team_id]
   }
   //  teams: Object.values(state.teams)
 }
