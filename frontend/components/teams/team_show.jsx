@@ -25,6 +25,10 @@ class TeamShow extends React.Component {
     return (
       <div className="teamshow">
         <h2>Teams Show Page</h2>
+        The TeamID: {this.props.team_id}
+        <div className="team-show-name">{this.props.team.name}</div>
+        <div className="team-show-description">{this.props.team.description}</div>
+
       </div>
     )
   }
