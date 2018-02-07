@@ -50,10 +50,10 @@ export const deleteProject = (id) => dispatch => {
   // Error handling here? Am I doing this right? FixMe)
 }
 
-const receiveProject = (project) => {
+const receiveProject = (payload) => {
   return {
     type: RECEIVE_PROJECT,
-    project
+    payload
   }
 }
 
