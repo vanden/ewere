@@ -27,15 +27,19 @@
     height: 92vh;
     width: 100%;
     background-color: $lightColour;
- //   flex-grow: 10;  // Why was this here?
 }
 
 
 .mainpage {  // This is everything beneath the navbar in all none login/signup views
     background-color: $lightestColour;
-    height: 100%;
+    height: 92vh;
     width: 100%;
     display: flex;
+    
+    h2     {
+        font-size: 28px;
+
+    }
 
 }
 

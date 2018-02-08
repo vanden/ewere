@@ -18,7 +18,7 @@ class TeamIndex extends React.Component {
     return (
       <div className="teamlist">
         <h2>Teams</h2>
-        <ul>
+        <ul className="sidebar-ul">
           {this.props.teams.map( team => (
             <TeamIndexItem className="team-list-item"
               key={team.id}

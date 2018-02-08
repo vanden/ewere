@@ -4,10 +4,42 @@
     display: flex;
     flex-direction: column;
     width: 20vw;
-    border: 1px dashed red;
+    height: 92vh;
+    padding: 12px;
+    box-sizing: border-box;
+    background-color: $darkestColour;
+    font-colour: $lightColour;
+
+    
+    a.TeamLink, a.ProjectLink{
+        text-decoration: none;
+        color: $lightestColour;
+        padding-left: 20px;
+        padding-bottom: 4px;// why no effect?
+        text-align: left;
+        font-size: 20px;
+        font-family: $title-font-primary, $title-font-secondary;
+    }
+    a.TeamLink:hover, a.ProjectLink:hover {
+        color: $lightColour;
+        cursor: pointer;
+
+    }
+    
+    
+}    
+
+.sidebar h2 {
+    font-size: 30px;
+    color: $lightestColour;
+    padding-top: 30px;
+    padding-bottom: 10px;
 }
 
 
-.sidebar h2 {
-    font-size: 44px;
+.teamlist ul li, .projectlist ul li {
+    padding-bottom: 6px;
+}
+.teamlist ul li a, .projectlist ul li a {
+    padding: 4px;
 }

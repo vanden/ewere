@@ -3,7 +3,8 @@ class CreateProjects < ActiveRecord::Migration[5.1]
     create_table :projects do |t|
 
       # Should this be scoped to the Team? How? # FixMe
-      t.string :name, null: false, unique: true
+      # I decided it should so removed # , unique: true
+      t.string :name, null: false
       t.integer :owner_id, null: false
       t.integer :team_id, null: false
       # I guess I should allow an empty description # ThinkMore

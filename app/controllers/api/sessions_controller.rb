@@ -5,7 +5,7 @@ class Api::SessionsController < ApplicationController
     email = params[:user][:email]
     password = params[:user][:password]
     uname = params[:user][:username]
-    @user = User.find_by_credentials(email, password)
+    @user = User.find_by_credentials(uname, password)
     
     if @user
       login(@user)

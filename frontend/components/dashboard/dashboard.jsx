@@ -41,12 +41,13 @@ class DashBoard extends React.Component {
     // console.log("FROM DashBoard Render")
     return (
       <div className="dashboard">
-        <h4>Hello Sad Dashboard World</h4>
-        <Switch>
-          <Route exact path='/teams/:team_id' component={TeamShowContainer} />
-          <Route exact path='/projects/:project_id'
-                 component={ProjectShowContainer} />
-        </Switch>
+        <div className="display-space">
+          <Switch>
+            <Route exact path='/teams/:team_id' component={TeamShowContainer} />
+            <Route exact path='/projects/:project_id'
+                   component={ProjectShowContainer} />
+          </Switch>
+        </div>
       </div>
     )
   }

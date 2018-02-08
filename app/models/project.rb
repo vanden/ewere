@@ -1,10 +1,7 @@
 class Project < ApplicationRecord
 
-  validates :owner_id, :team_id, :description, presence: true
-
-  # It would be better to scope the uniqueness to the team, wouldn't
-  # it? # ThinkMore
-  validates :name, presence: true, uniqueness: true
+  validates :owner_id, :team_id, :description, :name, presence: true
+  validates_uniqueness_of :name, scope: :team_id
 
   belongs_to :owner,
              foreign_key: :owner_id,
@@ -14,7 +11,8 @@ class Project < ApplicationRecord
              foreign_key: :team_id,
              class_name: :Team
 
-  # Should have_many Tasks once Tasks exist
+  has_many :tasks,
+           foreign_key: :project_id
 
 
   has_many :members,

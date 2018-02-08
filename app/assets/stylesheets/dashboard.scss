@@ -1,6 +1,40 @@
 .dashboard {
-
-    border: 1px dashed green;
+    display: flex;
     width: 80vw;
+    height : 92vh;
+    justify-content: center;
+    align-items: center;
+    background-color: $lightColour;
+    box-sizing: border-box;
+}
+
+.display-space {
+
+    width: 92%;
     background-color: $lightestColour;
+    box-shadow: 2px 3px 3px $darkestColour;
+    height: 92%;
+    box-sizing: border-box;
+    padding: 30px;
+
+    a:link a:visited {
+        color: red;
+    }
+
+}
+
+
+.showpage-heading {
+    padding-bottom: 12px;
+}
+
+.display-space h3 {
+    font-color: $lightColour;
+    font-size: 100%;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    }
+
+.display-space li {
+    padding-top: 5px;
 }
