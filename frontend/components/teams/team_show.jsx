@@ -1,12 +1,12 @@
 import React from 'react'
 //import TeamIndexItem from './team_index_item'
 
+//import TeamProjectsList from './team_project_list'
+
 class TeamShow extends React.Component {
 
   constructor(props, ownProps) {
     super(props)
-    // console.log(props)
-    // console.log("FROM TEAMSHOW CONSTRUCTOR")
   }
 
   componentDidMount() {
@@ -24,13 +24,47 @@ class TeamShow extends React.Component {
   }
 
   render () {
+    console.log(this.props.members)
+    console.log("FROM TEAMSHOW RENDER")
+    this.props.members.map( (m) => { console.log(m, 44444) })
     if (!this.props.team) { return "Loading ..." }
+
     return (
       <div className="teamshow">
-        <h2>Teams Show Page</h2>
-        The TeamID: {this.props.team_id}
-        <div className="team-show-name">{this.props.team.name}</div>
+        <h2 className="showpage-heading">{this.props.team.name}</h2>
+        <h3>Description</h3>
         <div className="team-show-description">{this.props.team.description}</div>
+        <section className="team-members-list">
+          <h3>Team Members</h3>
+          <ul>
+            {this.props.members.map( (member) => {
+              return <li className="team-member"
+                           key={member.id}>{member.username}
+                     </li>
+            }  )}
+          </ul>
+        </section>
+
+        <section className="team-projects-list">
+          <h3>Team Projects</h3>
+          <table>
+            <thead>
+              <tr>
+                <th>Project Name</th>
+                <th>Project Description</th>
+              </tr>
+            </thead>
+            <tbody>
+            {this.props.projects.map(
+              (project) => {
+                return <tr key={project.id}>
+                  <td>{project.name}</td>
+                    <td>{project.description}</td>
+            </tr>})}
+            </tbody>
+          </table>
+         </section>
+
 
       </div>
     )
@@ -38,3 +72,4 @@ class TeamShow extends React.Component {
 }
 
 export default TeamShow
+//          <TeamProjectsList projects={this.props.projects}/>      
