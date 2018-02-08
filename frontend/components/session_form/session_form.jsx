@@ -45,7 +45,7 @@ class SessionForm extends React.Component {
       password:"password"
     }
     this.props.demoUserSignIn(demoUser)
-      .then( () => {//should add to history, I guess  #FixMe
+      .then( () => {//should add to history, I guess  #FixMe (No. I think will receive props takes care. But, don't *know*.
       })
     }
 
