@@ -18,9 +18,17 @@ class ProjectShow extends React.Component {
   }
 
   render () {
+
+    if (!this.props.project) {return "Loading ..."}
+
+    const project = this.props.project
+
     return (
       <div className="projectshow">
         <h2>Projects Show Page</h2>
+        {project.name}
+        {project.description}
+
       </div>
     )
   }
