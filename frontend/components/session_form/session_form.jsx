@@ -93,13 +93,13 @@ class SessionForm extends React.Component {
               <div className="login-form-fields">
                 <br/>
                 <div>
-                <label>Username: </label>
-                <input type="text"
-                       value={this.state.username}
-                       onChange={this.update('username')}
-                       className="login-input"
-                       />
-                <br/>
+                  <label>Username: </label>
+                  <input type="text"
+                         value={this.state.username}
+                         onChange={this.update('username')}
+                         className="login-input"
+                         />
+                  <br/>
                 </div>
 
                 {(this.props.match.path === "/signup") ? (
@@ -118,9 +118,9 @@ class SessionForm extends React.Component {
         <div>
         <label>Password:</label>
         <input type="password"
-      value={this.state.password}
-      onChange={this.update('password')}
-      className="login-input"
+               value={this.state.password}
+               onChange={this.update('password')}
+               className="login-input"
         />
         <br/>
         </div>

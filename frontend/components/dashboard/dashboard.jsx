@@ -19,26 +19,21 @@ class DashBoard extends React.Component {
 
   constructor(props, ownProps) {
     super(props)
-    // console.log(ownProps)
-    // console.log(props)
-    // console.log("FROM DashBoard constructor")
+
   }
 
   componentDidMount() {
-    // console.log(this.props)
+
   }
 
   componentWillReceiveProps(props, ownProps) {
-    console.log(props)
-    console.log(ownProps)
-    console.log("^-----------DASHBOARD WILL RECIEVE -------")
+
   }
 
   
 
   render () {
-    // console.log(this.props)
-    // console.log("FROM DashBoard Render")
+
     return (
       <div className="dashboard">
         <div className="display-space">

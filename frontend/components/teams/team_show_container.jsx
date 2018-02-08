@@ -6,12 +6,8 @@ import { getAllTeams, deleteTeam, postTeam, getTeam } from '../../actions/team_a
 
 
 const mapStateToProps = (state, ownProps) => {
-  // console.log(ownProps)
-  // console.log(state)
-  // console.log("From team show container map state to props")
-  return {
 
-//    team_id: ownProps.match.params.team_id,
+  return {
 
     // David suggested, but undefined. Async? Or, borked? I had the
     // team_id one Aaron agreed this the way to go. Needs a
@@ -21,11 +17,11 @@ const mapStateToProps = (state, ownProps) => {
     members: Object.values(state.entities.members),
     projects: Object.values(state.entities.projects)
   }
-  //  teams: Object.values(state.teams)
+
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
-//  console.log(ownProps)
+
   return {
     getTeam: (id) => dispatch(getTeam(id))
   }}

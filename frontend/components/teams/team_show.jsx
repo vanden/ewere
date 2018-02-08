@@ -14,19 +14,15 @@ class TeamShow extends React.Component {
   }
 
   componentWillReceiveProps(nextProps){
-    // console.log('---------')
-    // console.log(nextProps)
-    // console.log("NEXT --^")
+
     if (this.props.match.params.team_id != nextProps.match.params.team_id) {
       this.props.getTeam(nextProps.match.params.team_id)
     }
-//fetch team here
+
   }
 
   render () {
-    console.log(this.props.members)
-    console.log("FROM TEAMSHOW RENDER")
-    this.props.members.map( (m) => { console.log(m, 44444) })
+
     if (!this.props.team) { return "Loading ..." }
 
     return (
@@ -40,12 +36,13 @@ class TeamShow extends React.Component {
             {this.props.members.map( (member) => {
               return <li className="team-member"
                            key={member.id}>{member.username}
-                     </li>
-            }  )}
+              </li>
+              }
+                                   )
+            }
           </ul>
         </section>
 
-   
       </div>
     )
   }
