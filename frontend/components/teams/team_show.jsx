@@ -45,27 +45,7 @@ class TeamShow extends React.Component {
           </ul>
         </section>
 
-        <section className="team-projects-list">
-          <h3>Team Projects</h3>
-          <table>
-            <thead>
-              <tr>
-                <th>Project Name</th>
-                <th>Project Description</th>
-              </tr>
-            </thead>
-            <tbody>
-            {this.props.projects.map(
-              (project) => {
-                return <tr key={project.id}>
-                  <td>{project.name}</td>
-                    <td>{project.description}</td>
-            </tr>})}
-            </tbody>
-          </table>
-         </section>
-
-
+   
       </div>
     )
   }
@@ -73,3 +53,23 @@ class TeamShow extends React.Component {
 
 export default TeamShow
 //          <TeamProjectsList projects={this.props.projects}/>      
+     // <section className="team-projects-list">
+     //      <h3>Team Projects</h3>
+     //      <table>
+     //        <thead>
+     //          <tr>
+     //            <th>Project Name</th>
+     //            <th>Project Description</th>
+     //          </tr>
+     //        </thead>
+     //        <tbody>
+     //        {this.props.projects.map(
+     //          (project) => {
+     //            return <tr key={project.id}>
+     //              <td>{project.name}</td>
+     //                <td>{project.description}</td>
+     //        </tr>})}
+     //        </tbody>
+     //      </table>
+     //     </section>
+
