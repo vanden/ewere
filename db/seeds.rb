@@ -10,7 +10,7 @@ User.destroy_all
 Team.destroy_all
 TeamMembership.destroy_all
 Project.destroy_all
-
+Task.destroy_all
 
 demo_user = User.create!(email: "guest@example.com", username: "guest", password:"password")                    
 user2 = User.create!(email: "vanden@gmail.com", username: "Brian", password:"123456")
@@ -58,4 +58,23 @@ TeamMembership.create!(team_id: team5.id, member_id: demo_user.id)
 proj1 = Project.create!(name: "Develop eWere", description: "Build tool to manage tasks", owner_id: user2.id, team_id: team5.id)
 proj2 = Project.create!(name: "Design eWere", description: "Think big thoughts about task management", owner_id: user2.id, team_id: team2.id)
 proj3 = Project.create!(name: "Design eWere's successor", description: "Think even bigger thoughts about task management", owner_id: team2.creator_id, team_id: team2.id)
-project4 = Project.create!(name: "Study market for eWere", description: "Determine if there is space for eWere in the marketplace", owner_id: team3.creator_id, team_id: team3.id)
+proj4 = Project.create!(name: "Study market for eWere", description: "Determine if there is space for eWere in the marketplace", owner_id: team3.creator_id, team_id: team3.id)
+
+# proj1 
+Task.create!(title: "Develop Task model", done: true, owner_id: user2.id, project_id: proj1.id)
+Task.create!(title: "Develop Task migration", done: true, owner_id: demo_id, project_id: proj1.id)
+Task.create(title: "Develop Task api_utils", done: true, owner_id: user2.id, project_id: proj1.id)
+Task.create(title: "Develop machine learning plugin", owner_id: user2.id, project_id: proj1.id)
+
+#proj2
+Task.create!(title: "Draft eWere UML diagrams", owner_id: user2.id, project_id: proj2.id)
+Task.create!(title: "Design eWere databse schema", done: true, owner_id: demo_id, project_id: proj1.id)
+Task.create(title: "Design plugin architecture for eWere", done: false, owner_id: user2.id, project_id: proj2.id)
+
+#proj3
+Task.create!(title: "Draft eWere2 UML diagrams", owner_id: user2.id, project_id: proj3.id)
+Task.create!(title: "Design new database for use in eWere2", owner_id: demo_id, project_id: proj3.id)
+
+#proj4
+Task.create!(title: "Determine what percentage of users have things to do", done: true, owner_id: user2.id, project_id: proj4.id)
+Task.create!(title: "Develop consumer survery", done: true, owner_id: demo_id, project_id: proj4.id)
