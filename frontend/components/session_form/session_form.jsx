@@ -92,6 +92,7 @@ class SessionForm extends React.Component {
             <div className="login-form-block">
               <div className="login-form-fields">
                 <br/>
+                <div>
                 <label>Username: </label>
                 <input type="text"
                        value={this.state.username}
@@ -99,31 +100,41 @@ class SessionForm extends React.Component {
                        className="login-input"
                        />
                 <br/>
-                <label>Email: </label>
-                <input type="text"
-                       value={this.state.email}
-                       onChange={this.update('email')}
-                       className="login-input"
-                       />
-                <br/>
-                <label>Password:</label>
-                <input type="password"
-                       value={this.state.password}
-                       onChange={this.update('password')}
-                       className="login-input"
-                       />
-                <br/>
-              </div>
-              <div className="login-buttons">
-                <input className="authbtn" type="submit" value={capitalizeFirstLetter(this.props.formType)} />
-                <button className="authbtn"
-                        onClick={(e) => this.handleDemoUserSignin(e)} >Demo User</button>
-              </div>
-              {this.renderErrors()}
-            </div>
-          </form>
+                </div>
+
+                {(this.props.match.path === "/signup") ? (
+                  <span>
+                    <label>Email: </label>
+                    <input type="text"
+                           value={this.state.email}
+                           onChange={this.update("email")}
+                           className="login-input"
+                           />
+                  </span>
+                ) : (
+                  ""
+                )}
+
+        <div>
+        <label>Password:</label>
+        <input type="password"
+      value={this.state.password}
+      onChange={this.update('password')}
+      className="login-input"
+        />
+        <br/>
         </div>
+        </div>
+        <div className="login-buttons">
+        <input className="authbtn" type="submit" value={capitalizeFirstLetter(this.props.formType)} />
+        <button className="authbtn"
+      onClick={(e) => this.handleDemoUserSignin(e)} >Demo User</button>
+        </div>
+        {this.renderErrors()}
       </div>
+        </form>
+        </div>
+        </div>
     );
   }
 }
