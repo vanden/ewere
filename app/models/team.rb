@@ -13,4 +13,6 @@ class Team < ApplicationRecord
 
   has_many :projects,
            foreign_key: :team_id
+
+  has_many :tasks, through: :projects
 end

@@ -23,8 +23,8 @@ class User < ApplicationRecord
 
   has_many :projects, through: :teams
 
-  # has_many :tasks
-  # can I have may task and have many task through projects?
+  has_many :tasks,
+           foreign_key: :owner_id
 
 
   def self.find_by_credentials(email, password)
