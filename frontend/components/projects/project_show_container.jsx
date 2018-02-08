@@ -6,11 +6,11 @@ import { getAllProjects, deleteProject, postProject, getProject } from '../../ac
 
 
 const mapStateToProps = (state, ownProps) => {
-
+  let project_id = ownProps.match.params.project_id
   return {
-    project_id: ownProps.match.params.project_id,
+    project_id,
+    project: state.entities.projects[project_id]
   }
-  //  projects: Object.values(state.projects)
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
