@@ -43,6 +43,10 @@ class Api::TeamsController < ApplicationController
 
   def show
     @team = Team.find(params[:id])
+    # if @team
+    #   render: show
+    # else
+    #   render json: @team.errors.full_messages, status: 404
   end
 
 
