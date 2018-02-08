@@ -1,13 +1,11 @@
 .dashboard {
-    displax: flex;
+    display: flex;
     width: 80vw;
-    heigth: 92vh;
+    height : 92vh;
     justify-content: center;
     align-items: center;
     background-color: $lightColour;
-    justify-content: center;
     box-sizing: border-box;
-        
 }
 
 .display-space {
@@ -16,9 +14,6 @@
     background-color: $lightestColour;
     box-shadow: 2px 3px 3px $darkestColour;
     height: 92%;
-    margin-top: 3%;
-    margin-bottom: 2%;
-    margin-left: 4%;
     box-sizing: border-box;
     padding: 30px;
 
