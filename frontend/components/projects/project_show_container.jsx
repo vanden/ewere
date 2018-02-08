@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom'
 
 import ProjectShow from './project_show';
-//import { getAllProjects, deleteProject, postProject, getProject } from '../../actions/project_actions';
+import { getAllProjects, deleteProject, postProject, getProject } from '../../actions/project_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
