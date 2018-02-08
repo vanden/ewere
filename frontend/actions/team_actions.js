@@ -12,7 +12,8 @@ export const RECEIVE_TEAM_ERRORS = 'RECEIVE_TEAM_ERRORS'
 
 export const getTeam = (id) => dispatch => {
   return APIUtil.getTeam(id)
-    .then( team => dispatch(receiveTeam(team)))
+    .then( team => dispatch(receiveTeam(team)))// ,
+           // err => (dispatch(recieveTeamErrors(err.responseJSON))))
 }
 
 
