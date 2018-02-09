@@ -157,6 +157,7 @@
 
 .link-container {
     display: flex;
-    width: 22%;
+    max-width: 200px;
+    min-width: 150px;
     justify-content: space-between;
 }
