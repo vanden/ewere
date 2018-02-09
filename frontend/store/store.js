@@ -32,7 +32,7 @@ const thunk = ({ dispatch, getState }) => next => action => {
 
 import rootReducer from '../reducers/root_reducer';
 
-const middlewares = [thunk, logger]
+const middlewares = [thunk]//, logger]
 //middlewares.push(logger)  // FixMe Remove once in production
 
 // Commented out until we are ready for production. This all included
