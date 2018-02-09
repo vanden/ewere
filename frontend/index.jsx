@@ -34,6 +34,25 @@ import { getAllProjects, getProject,
          postProject, updateProject, deleteProject
        } from './util/project_api_util'
 
+// FixMe Here for testing
+// window.deleteTeamMembership = deleteTeamMembership
+// window.postTeamMembership = postTeamMembership
+// window.getTeam = getTeam
+// window.getAllTeams = getAllTeams
+// window.postTeam = postTeam
+// window.updateTeam = updateTeam
+// window.deleteTeam = deleteTeam
+// window.getProject = getProject
+// window.getAllProjects = getAllProjects
+// window.postProject = postProject
+// window.updateProject = updateProject
+// window.deleteProject = deleteProject
+// window.getState = store.getState
+// window.dispatch = store.dispatch
+// window.login = login
+// window.logout = logout
+// window.signup = signup
+
 
 // Move into EventListener once done testing //TODO
 let store = configureStore()
@@ -54,21 +73,3 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// FixMe Here for testing
-// window.deleteTeamMembership = deleteTeamMembership
-// window.postTeamMembership = postTeamMembership
-// window.getTeam = getTeam
-// window.getAllTeams = getAllTeams
-// window.postTeam = postTeam
-// window.updateTeam = updateTeam
-// window.deleteTeam = deleteTeam
-// window.getProject = getProject
-// window.getAllProjects = getAllProjects
-// window.postProject = postProject
-// window.updateProject = updateProject
-// window.deleteProject = deleteProject
-// window.getState = store.getState
-// window.dispatch = store.dispatch
-// window.login = login
-// window.logout = logout
-// window.signup = signup
