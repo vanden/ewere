@@ -19,7 +19,9 @@ class ProjectShow extends React.Component {
 
   render () {
 
-    if (!this.props.project) {return "Loading ..."}
+    // The second clause being needed suggests that there may have
+    // been two distinct api calls, here. Not great. FixMe
+    if (!this.props.project || !this.props.project.team) {return "Loading ..."}
 
     const project = this.props.project
 
