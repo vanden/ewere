@@ -46,7 +46,7 @@ export const teamErrorsReducer = (state = [], action) => {
   case RECEIVE_TEAM_ERRORS:
     // Should this return Object.assign({}, state, action.errors) instead?
 //    return action.errors || [];
-    return Object.assign({}, state, action.errors)
+    return action.errors
 
   default:
     return state
