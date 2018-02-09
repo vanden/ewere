@@ -29,22 +29,23 @@ class projectForm extends React.Component {
       <div>
         <h3>{text}</h3>
         <form onSubmit={this.handleSubmit}>
-          <div>
-            <label><p>Title</p>            </label>
-              
+          <div className="form-fields">
+            <label>Title </label>
+              <div>
               <input className="name-input"
                 type="Project Name"
                 value={this.state.name}
                 onChange={this.update('name')} />
-
+              </div>
           </div>
           
-          <div>
-            <label>Project Description
-              <textarea
+          <div className="form-fields">
+            <label>Project Description </label>
+            <div>
+              <textarea className="name-input"
                 value={this.state.description}
                 onChange={this.update('description')} />
-            </label>
+            </div>
           </div>
           
           <input className="submit-button" type="submit" value={text} />

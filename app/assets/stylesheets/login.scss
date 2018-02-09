@@ -99,7 +99,7 @@
 }
 
 
-.login-form-fields label {
+.login-form-fields label, .form-fields label  {
     color: $darkestColour;
     font-family: $title-font-primary, $title-font-secondary;
     padding: 0px 0px 3px;
@@ -160,4 +160,11 @@
     max-width: 200px;
     min-width: 150px;
     justify-content: space-between;
+}
+
+
+// Obviously, wrong place
+
+textarea {
+    width: 500px;
 }
