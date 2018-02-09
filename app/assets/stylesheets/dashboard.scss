@@ -14,13 +14,21 @@
     background-color: $lightestColour;
     box-shadow: 2px 3px 3px $darkestColour;
     height: 92%;
+    font-size: 110%;
     box-sizing: border-box;
     padding: 30px;
 
     a:link a:visited {
-        color: red;
+
     }
 
+    h2 {
+        font-size: 130%;
+    }
+
+    .delete-link {
+
+    }
 }
 
 
@@ -30,7 +38,7 @@
 
 .display-space h3 {
     font-color: $lightColour;
-    font-size: 100%;
+    font-size: 130%;
     padding-top: 20px;
     padding-bottom: 5px;
     }

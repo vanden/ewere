@@ -2,7 +2,8 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom'
 
 import TeamShow from './team_show';
-import { getAllTeams, deleteTeam, postTeam, getTeam } from '../../actions/team_actions';
+import { getTeam } from '../../actions/team_actions';
+import { postProject } from '../../actions/project_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -24,7 +25,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
 
   return {
-    getTeam: (id) => dispatch(getTeam(id))
+    getTeam: (id) => dispatch(getTeam(id)),
+    postProject: (newProject) => dispatch(newProject(newProject))
   }}
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(TeamShow))
