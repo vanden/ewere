@@ -42,11 +42,12 @@ class Api::TeamsController < ApplicationController
 
 
   def show
-    @team = Team.find(params[:id])
-    # if @team
-    #   render: show
-    # else
-    #   render json: @team.errors.full_messages, status: 404
+    if Team.exists?(params[:id])
+      @team = Team.find(params[:id])
+      render :show
+    else
+      render json: ["THE BOGUS OCCURED"], status: 404
+    end
   end
 
 
