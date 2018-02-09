@@ -17,7 +17,8 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
   console.log(ownProps)
   return {
-    getProject: (id) => dispatch(getProject(id))
+    getProject: (id) => dispatch(getProject(id)),
+    deleteProject: (id) => dispatch(deleteProject(id))
   }}
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ProjectShow))
