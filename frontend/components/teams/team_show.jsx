@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 //import TeamIndexItem from './team_index_item'
 
 //import TeamProjectsList from './team_project_list'
@@ -27,7 +28,12 @@ class TeamShow extends React.Component {
 
     return (
       <div className="teamshow">
-        <h2 className="showpage-heading">{this.props.team.name}</h2>
+        <div className="showpage-header">
+          <div>
+            <h2 className="showpage-heading">{this.props.team.name}</h2>
+          </div>
+          <Link className="form-link" to={'/projects/new'}>New Project</Link>
+        </div>
         <h3>Description</h3>
         <div className="team-show-description">{this.props.team.description}</div>
         <section className="team-members-list">
@@ -42,7 +48,6 @@ class TeamShow extends React.Component {
             }
           </ul>
         </section>
-
       </div>
     )
   }
