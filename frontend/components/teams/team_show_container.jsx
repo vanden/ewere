@@ -15,7 +15,8 @@ const mapStateToProps = (state, ownProps) => {
     // if not null in state. WUT
     team: state.entities.teams[ownProps.match.params.team_id],
     members: Object.values(state.entities.members),
-    projects: Object.values(state.entities.projects)
+    projects: Object.values(state.entities.projects),
+    errors: state.errors.team
   }
 
 }
