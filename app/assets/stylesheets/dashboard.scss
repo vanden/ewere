@@ -38,3 +38,14 @@
 .display-space li {
     padding-top: 5px;
 }
+
+
+.showpage-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.delete-link {
+     margin-right: 5px
+}

@@ -18,6 +18,8 @@ const Auth = ({ component: Component, path, loggedIn, exact }) => {
 const Protected = ({ component: Component, path, loggedIn, exact }) => (
   <Route path={path} exact={exact} render={(props) => {
       if (loggedIn || path === '/login' || path === '/signup') {
+        // This should probably be expanded to check if a user is a
+        // member of a team before showing the team page, etc.
       return <Component {...props} />
       } else{
           return <Redirect to="/login" />

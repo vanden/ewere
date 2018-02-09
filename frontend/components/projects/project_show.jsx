@@ -1,5 +1,5 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom';
 
 class ProjectShow extends React.Component {
 
@@ -19,15 +19,28 @@ class ProjectShow extends React.Component {
 
   render () {
 
-    if (!this.props.project) {return "Loading ..."}
+    // The second clause being needed suggests that there may have
+    // been two distinct api calls, here. Not great. FixMe
+    if (!this.props.project || !this.props.project.team) {return "Loading ..."}
 
     const project = this.props.project
 
     return (
       <div className="projectshow">
-        <h2>Projects Show Page</h2>
-        {project.name}
-        {project.description}
+        <div className="showpage-header">
+          <div>
+          <h2 className="showpage-heading">{this.props.project.name}</h2>
+          </div>
+          <Link className="delete-link" to={`/`} onClick={() => {this.props.deleteProject(project.id)}}>Delete</Link>
+        </div>
+        <h3>Description</h3>
+        <div className="project-show-description">{this.props.project.description}</div>
+
+        <h3>Team</h3>
+        <div className="project-show-team">{this.props.project.team.name}</div>
+
+        <h3>Tasks</h3>
+        <div className="project-show-tasks">Tasks will go here once implemented</div>
 
       </div>
     )
