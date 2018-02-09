@@ -14,10 +14,7 @@ export const sessionReducer = (state = _nullUser, action) => {
 
   case RECEIVE_CURRENT_USER:
     const currentUser = action.currentUser;
-    // Is Object.assign really needed here? User was an argument, not
-    // state. QUESTION
     let newState = Object.assign({}, { currentUser })
-    //console.log(newState)
     return newState
 
   default:
@@ -35,9 +32,9 @@ export const sessionErrorsReducer = (state = [], action) => {
     return action.errors
 
   case RECEIVE_CURRENT_USER:
-    return [] // Was return null. Does it matter? FixMe
+    return []
 
   default:
     return state
   }
-};
+}

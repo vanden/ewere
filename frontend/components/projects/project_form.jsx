@@ -3,14 +3,12 @@ import React from 'react'
 class projectForm extends React.Component {
   constructor(props) {
     super(props)
-    console.error(props)
     this.state = this.props.project
     this.handleSubmit = this.handleSubmit.bind(this)
   }
 
   handleSubmit(e) {
     e.preventDefault()
-    console.warn(this.state)
     this.props.action(this.state).then(() => this.props.history.push('/'))
   }
 
