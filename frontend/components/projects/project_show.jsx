@@ -24,14 +24,22 @@ class ProjectShow extends React.Component {
     if (!this.props.project || !this.props.project.team) {return "Loading ..."}
 
     const project = this.props.project
+    const project_id = project.id
+    const team_id = project.team_id
 
     return (
       <div className="projectshow">
         <div className="showpage-header">
           <div>
-          <h2 className="showpage-heading">{this.props.project.name}</h2>
+            <h2 className="showpage-heading">{this.props.project.name}</h2>
           </div>
-          <Link className="delete-link" to={`/`} onClick={() => {this.props.deleteProject(project.id)}}>Delete</Link>
+          <div className="link-container">
+
+            <Link className="form-link"
+                  to={`/projects/${project_id}/edit`} >Edit</Link>
+            <Link className="delete-link" to={`/`} onClick={() => {this.props.deleteProject(project.id)}}>Delete</Link>
+
+          </div>
         </div>
         <h3>Description</h3>
         <div className="project-show-description">{this.props.project.description}</div>
@@ -41,7 +49,6 @@ class ProjectShow extends React.Component {
 
         <h3>Tasks</h3>
         <div className="project-show-tasks">Tasks will go here once implemented</div>
-
       </div>
     )
   }

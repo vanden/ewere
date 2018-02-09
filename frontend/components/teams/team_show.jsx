@@ -25,14 +25,14 @@ class TeamShow extends React.Component {
   render () {
 
     if (!this.props.team) { return "Loading ..." }
-
+    const team_id = this.props.match.params.team_id
     return (
       <div className="teamshow">
         <div className="showpage-header">
           <div>
             <h2 className="showpage-heading">{this.props.team.name}</h2>
           </div>
-          <Link className="form-link" to={'/projects/new'}>New Project</Link>
+          <Link className="form-link" to={`/team/${team_id}/projects/new`}>New Project</Link>
         </div>
         <h3>Description</h3>
         <div className="team-show-description">{this.props.team.description}</div>

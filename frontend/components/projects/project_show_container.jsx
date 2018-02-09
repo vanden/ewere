@@ -2,7 +2,8 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom'
 
 import ProjectShow from './project_show';
-import { getAllProjects, deleteProject, postProject, getProject } from '../../actions/project_actions';
+import { getAllProjects, deleteProject, postProject, getProject,
+         updateProject } from '../../actions/project_actions';
 
 
 const mapStateToProps = (state, ownProps) => {
@@ -18,7 +19,8 @@ const mapDispatchToProps = (dispatch, ownProps) => {
   console.log(ownProps)
   return {
     getProject: (id) => dispatch(getProject(id)),
-    deleteProject: (id) => dispatch(deleteProject(id))
+    deleteProject: (id) => dispatch(deleteProject(id)),
+    updateProject: (proj) => dispatch(updateProject(proj))
   }}
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(ProjectShow))

@@ -132,7 +132,7 @@
 
 
 
-.authbtn, .delete-link, .form-link {
+.authbtn, .delete-link, .form-link, .submit-button {
     font-weight: bold;
     font-size: 15px;
     font-family: $title-font-primary, $title-font-secondary;
@@ -152,4 +152,11 @@
     background-color: $lightColour;
     color: $darkestColour;
     cursor: pointer;
+}
+
+
+.link-container {
+    display: flex;
+    width: 22%;
+    justify-content: space-between;
 }
