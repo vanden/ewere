@@ -30,7 +30,7 @@ class projectForm extends React.Component {
           <div className="form-fields">
             <label>Title </label>
               <div>
-              <input className="name-input"
+              <input className="details-input"
                 type="Project Name"
                 value={this.state.name}
                 onChange={this.update('name')} />
@@ -40,7 +40,7 @@ class projectForm extends React.Component {
           <div className="form-fields">
             <label>Project Description </label>
             <div>
-              <textarea className="name-input"
+              <textarea className="details-input"
                 value={this.state.description}
                 onChange={this.update('description')} />
             </div>

@@ -1,9 +1,10 @@
-.name-input {
+.details-input {
     width: 64%;
     min-width: 200px;
     max-width: 300px;
     font-size: 18px;
     font-color: $darkestColour;
+    font-family: $text-font-primary, $text-font-secondary;
     border-radius: 5px;
     border-color: $darkColour;
     border-width: 1px;
