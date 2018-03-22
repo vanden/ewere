@@ -17,7 +17,7 @@ export const projectReducer = (state = defaultState, action) => {
 
   case RECEIVE_TEAM:
     return Object.assign({}, action.payload.projects)
-    
+
   case RECEIVE_PROJECT:
     const project = action.payload.project
     return Object.assign({}, state, { [project.id]: project })

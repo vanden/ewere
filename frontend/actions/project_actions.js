@@ -80,4 +80,3 @@ const removeProject = (payload) => {
     payload
   }
 }
-
