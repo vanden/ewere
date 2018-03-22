@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :teams, except: [:new, :edit]
     resources :team_memberships, only: [:create, :show, :destroy]
     resources :projects, except: [:new, :edit]
+    resources :tasks, except: [:new, :edit]
   end
 
   root to: "static_pages#root"
