@@ -9,7 +9,8 @@ class projectForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault()
-    this.props.action(this.state).then(() => this.props.history.push('/'))
+    this.props.action(this.state).then((action) =>{
+      this.props.history.push(`/projects/${action.payload.project.id}`)})
   }
 
   update(field) {
