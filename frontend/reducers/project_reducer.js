@@ -27,7 +27,7 @@ export const projectReducer = (state = defaultState, action) => {
 
   case REMOVE_PROJECT:
     let newState = Object.assign({}, state)
-    delete newState[action.project.id]
+    delete newState[action.payload.project.id]
     return newState
 
   default:

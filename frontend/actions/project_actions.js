@@ -74,10 +74,10 @@ const receiveAllProjects = (projects) => {
 }
 
 
-const removeProject = (project) => {
+const removeProject = (payload) => {
   return {
     type: REMOVE_PROJECT,
-    project
+    payload
   }
 }
 
