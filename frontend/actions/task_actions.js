@@ -11,7 +11,7 @@ export const RECEIVE_TASK_ERRORS = 'RECEIVE_TASK_ERRORS'
 
 export const getTask = (id) => dispatch => {
   return APIUtil.getTask(id)
-    .then( task => dispatch(receiveTask(task)) )
+    .then( payload => dispatch(receiveTask(payload)) )
 }
 
 
