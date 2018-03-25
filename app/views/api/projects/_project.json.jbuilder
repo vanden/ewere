@@ -11,3 +11,6 @@ json.members do
 end
 
 
+json.tasks do
+  json.array! project.tasks, :id, :title, :owner_id
+end

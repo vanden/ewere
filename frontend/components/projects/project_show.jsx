@@ -9,6 +9,7 @@ class ProjectShow extends React.Component {
 
   componentDidMount() {
     this.props.getProject(this.props.match.params.project_id)
+    this.props.getAllTasks()
   }
 
   componentWillReceiveProps(nextProps){
@@ -48,6 +49,9 @@ class ProjectShow extends React.Component {
         <div className="project-show-team">{this.props.project.team.name}</div>
 
         <h3>Tasks</h3>
+        <ul>
+          {Object.keys(this.props.tasks).map(task =>  <li key={task}>{this.props.tasks[task].title}</li> )}
+        </ul>
         <div className="project-show-tasks">Tasks will go here once implemented</div>
       </div>
     )
