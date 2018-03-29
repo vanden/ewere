@@ -23,7 +23,7 @@ export const projectReducer = (state = defaultState, action) => {
     return Object.assign({}, state, { [project.id]: project })
 
   case RECEIVE_ALL_PROJECTS:
-    return Object.assign({}, action.projects)
+    return Object.assign({}, action.payload.projects)
 
   case REMOVE_PROJECT:
     let newState = Object.assign({}, state)

@@ -66,10 +66,10 @@ const receiveProjectErrors = (errors) => {
 }
 
 
-const receiveAllProjects = (projects) => {
+const receiveAllProjects = (payload) => {
   return {
     type: RECEIVE_ALL_PROJECTS,
-    projects
+    payload
   }
 }
 
